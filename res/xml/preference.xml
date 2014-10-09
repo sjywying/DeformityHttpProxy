@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="代理服务器设定" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isProxyServer"
+            android:title="是否使用代理服务器" />
+
+        <EditTextPreference
+            android:defaultValue="10.0.0.172:80"
+            android:key="proxyServer"
+            android:summary="设定代理服务器的IP地址和端口号"
+            android:title="代理IP和端口号" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="前插内容设定" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isBeforeURL"
+            android:title="是否前插内容" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:defaultValue="wap.10010.com"
+            android:key="beforeURL"
+            android:title="前插URL" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="HTTP请求行设定" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isReplaceURL"
+            android:title="是否更换URL" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:defaultValue="wap.10010.com"
+            android:key="replaceURL"
+            android:title="更换的URL" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isSuffix"
+            android:title="是否添加后缀URL" />
+
+        <EditTextPreference
+            android:defaultValue="wap.10010.com"
+            android:key="suffix"
+            android:title="后缀URL" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isReplaceProtectVersion"
+            android:title="是否更换HTTP协议版本" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:defaultValue="HTTP1.1"
+            android:key="replaceProtectVersion"
+            android:title="HTTP协协议版本" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="HOST设定" >
+        <CheckBoxPreference
+            android:key="isInsertHost"
+            android:title="是否插入HOST字段" />
+
+        <EditTextPreference
+            android:defaultValue="wap.10010.com"
+            android:key="insertHost"
+            android:title="要插入的Host" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isReplaceHost"
+            android:title="是否更改原Host" />
+
+        <EditTextPreference
+            android:defaultValue="wap.10010.com"
+            android:key="replaceHost"
+            android:title="更改的Host" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Accept域设定" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isReplaceAccept"
+            android:title="是否替换Accpet" />
+
+        <EditTextPreference
+            android:defaultValue="*/*, application/vnd.wap.mms-message, application/vnd.wap.sic"
+            android:key="replaceAccept"
+            android:title="Accept" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="X-Online-Host设定" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isInsertX"
+            android:title="是否前插X-Online-Host" />
+
+        <EditTextPreference
+            android:defaultValue="wap.ha.10086.com"
+            android:key="insertX"
+            android:title="前插的X-Online-Host" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="isXOnlineHost"
+            android:title="是否更改X-Online-Host" />
+
+        <EditTextPreference
+            android:defaultValue="wap.ha.10086.com"
+            android:key="xOnlineHost"
+            android:title="要更换的X-Online-Host" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Connection变更" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="是否替换Connection" 
+            android:key="isReplaceConnection"/>
+
+        <EditTextPreference
+            android:defaultValue="close"
+            android:title="要替换的Connection"
+            android:key="replaceConnection" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="自定义字段" >
+        <CheckBoxPreference
+            android:key="isCustom"
+            android:title="是否插入自定义字段" />
+
+        <EditTextPreference
+            android:key="custom"
+            android:summary="%HOST%-主机 %PORT%-端口 %URI%-URI URLEcode()"
+            android:title="要插入的自定义字段" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
