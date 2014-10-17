@@ -8,9 +8,6 @@ public class Config
 {
 	public static boolean isProxyServer;
 	public static boolean isBeforeURL;
-	public static boolean isReplaceURL;
-	public static boolean isSuffix;
-	public static boolean isReplaceProtectVersion;
 	public static boolean isInsertHost;
 	public static boolean isReplaceHost;
 	public static boolean isReplaceAccept;
@@ -21,9 +18,7 @@ public class Config
 	
 	public static String proxyServer;
 	public static String beforeURL;
-	public static String replaceURL;
-	public static String suffix;
-	public static String replaceProtectVersion;
+	public static String firstLinePattern;
 	public static String insertHost;
 	public static String replaceHost;
 	public static String replaceAccept;
@@ -36,9 +31,6 @@ public class Config
 		SharedPreferences pres = context.getSharedPreferences("com.cfun.proxy_preferences",android.content.Context.MODE_PRIVATE);
 		isProxyServer 					= pres.getBoolean("isProxyServer", false);
 		isBeforeURL 						= pres.getBoolean("isBeforeURL", false);
-		isReplaceURL 					= pres.getBoolean("isReplaceURL", false);
-		isSuffix 							= pres.getBoolean("isSuffix", false);
-		isReplaceProtectVersion 	= pres.getBoolean("isReplaceProtectVersion", false);
 		isInsertHost 						= pres.getBoolean("isInsertHost", false);
 		isReplaceHost 					= pres.getBoolean("isReplaceHost", false);
 		isReplaceAccept				= pres.getBoolean("isReplaceAccept", false);
@@ -49,9 +41,7 @@ public class Config
 		
 		proxyServer						=pres.getString("proxyServer", "");
 		beforeURL						=pres.getString("beforeURL", "");
-		replaceURL						=pres.getString("replaceURL", "");
-		suffix								=pres.getString("suffix", "");
-		replaceProtectVersion		=pres.getString("replaceProtectVersion", "");
+		firstLinePattern					=pres.getString("firstLinePattern", "");
 		insertHost							=pres.getString("insertHost", "");
 		replaceHost						=pres.getString("replaceHost", "");
 		replaceAccept					=pres.getString("replaceAccept", "");

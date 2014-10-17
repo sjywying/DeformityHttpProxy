@@ -55783,12 +55783,13 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 151):
+Constant Pool (count = 126):
   + String []
   + String [beforeURL]
   + String [close]
   + String [com.cfun.proxy_preferences]
   + String [custom]
+  + String [firstLinePattern]
   + String [insertHost]
   + String [insertX]
   + String [isBeforeURL]
@@ -55799,17 +55800,11 @@ Constant Pool (count = 151):
   + String [isReplaceAccept]
   + String [isReplaceConnection]
   + String [isReplaceHost]
-  + String [isReplaceProtectVersion]
-  + String [isReplaceURL]
-  + String [isSuffix]
   + String [isXOnlineHost]
   + String [proxyServer]
   + String [replaceAccept]
   + String [replaceConnection]
   + String [replaceHost]
-  + String [replaceProtectVersion]
-  + String [replaceURL]
-  + String [suffix]
   + String [xOnlineHost]
   + Class [android/content/Context]
   + Class [android/content/SharedPreferences]
@@ -55824,9 +55819,9 @@ Constant Pool (count = 151):
   + Fieldref [com/cfun/proxy/a.g Z]
   + Fieldref [com/cfun/proxy/a.h Z]
   + Fieldref [com/cfun/proxy/a.i Z]
-  + Fieldref [com/cfun/proxy/a.j Z]
-  + Fieldref [com/cfun/proxy/a.k Z]
-  + Fieldref [com/cfun/proxy/a.l Z]
+  + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
+  + Fieldref [com/cfun/proxy/a.k Ljava/lang/String;]
+  + Fieldref [com/cfun/proxy/a.l Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
@@ -55834,11 +55829,6 @@ Constant Pool (count = 151):
   + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.t Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.u Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.v Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.w Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.x Ljava/lang/String;]
   + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
   + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
   + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
@@ -55854,9 +55844,9 @@ Constant Pool (count = 151):
   + NameAndType [getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
   + NameAndType [h Z]
   + NameAndType [i Z]
-  + NameAndType [j Z]
-  + NameAndType [k Z]
-  + NameAndType [l Z]
+  + NameAndType [j Ljava/lang/String;]
+  + NameAndType [k Ljava/lang/String;]
+  + NameAndType [l Ljava/lang/String;]
   + NameAndType [m Ljava/lang/String;]
   + NameAndType [n Ljava/lang/String;]
   + NameAndType [o Ljava/lang/String;]
@@ -55864,11 +55854,6 @@ Constant Pool (count = 151):
   + NameAndType [q Ljava/lang/String;]
   + NameAndType [r Ljava/lang/String;]
   + NameAndType [s Ljava/lang/String;]
-  + NameAndType [t Ljava/lang/String;]
-  + NameAndType [u Ljava/lang/String;]
-  + NameAndType [v Ljava/lang/String;]
-  + NameAndType [w Ljava/lang/String;]
-  + NameAndType [x Ljava/lang/String;]
   + Utf8 []
   + Utf8 [(Landroid/content/Context;)V]
   + Utf8 [(Ljava/lang/String;I)Landroid/content/SharedPreferences;]
@@ -55890,6 +55875,7 @@ Constant Pool (count = 151):
   + Utf8 [d]
   + Utf8 [e]
   + Utf8 [f]
+  + Utf8 [firstLinePattern]
   + Utf8 [g]
   + Utf8 [getBoolean]
   + Utf8 [getSharedPreferences]
@@ -55906,9 +55892,6 @@ Constant Pool (count = 151):
   + Utf8 [isReplaceAccept]
   + Utf8 [isReplaceConnection]
   + Utf8 [isReplaceHost]
-  + Utf8 [isReplaceProtectVersion]
-  + Utf8 [isReplaceURL]
-  + Utf8 [isSuffix]
   + Utf8 [isXOnlineHost]
   + Utf8 [j]
   + Utf8 [java/lang/Object]
@@ -55924,18 +55907,10 @@ Constant Pool (count = 151):
   + Utf8 [replaceAccept]
   + Utf8 [replaceConnection]
   + Utf8 [replaceHost]
-  + Utf8 [replaceProtectVersion]
-  + Utf8 [replaceURL]
   + Utf8 [s]
-  + Utf8 [suffix]
-  + Utf8 [t]
-  + Utf8 [u]
-  + Utf8 [v]
-  + Utf8 [w]
-  + Utf8 [x]
   + Utf8 [xOnlineHost]
 
-Fields (count = 24):
+Fields (count = 19):
   + Field:        a Z
     Access flags: 0x9
       = public static boolean a
@@ -55963,15 +55938,15 @@ Fields (count = 24):
   + Field:        i Z
     Access flags: 0x9
       = public static boolean i
-  + Field:        j Z
+  + Field:        j Ljava/lang/String;
     Access flags: 0x9
-      = public static boolean j
-  + Field:        k Z
+      = public static java.lang.String j
+  + Field:        k Ljava/lang/String;
     Access flags: 0x9
-      = public static boolean k
-  + Field:        l Z
+      = public static java.lang.String k
+  + Field:        l Ljava/lang/String;
     Access flags: 0x9
-      = public static boolean l
+      = public static java.lang.String l
   + Field:        m Ljava/lang/String;
     Access flags: 0x9
       = public static java.lang.String m
@@ -55993,240 +55968,183 @@ Fields (count = 24):
   + Field:        s Ljava/lang/String;
     Access flags: 0x9
       = public static java.lang.String s
-  + Field:        t Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String t
-  + Field:        u Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String u
-  + Field:        v Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String v
-  + Field:        w Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String w
-  + Field:        x Ljava/lang/String;
-    Access flags: 0x9
-      = public static java.lang.String x
 
 Methods (count = 1):
   + Method:       a(Landroid/content/Context;)V
     Access flags: 0x9
       = public static void a(android.content.Context)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 309, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 247, locals = 2, stack = 3):
       [0] aload_0 v0
       [1] ldc #4
         + String [com.cfun.proxy_preferences]
       [3] iconst_0
-      [4] invokevirtual #56
+      [4] invokevirtual #46
         + Methodref [android/content/Context.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
       [7] astore_1 v1
       [8] aload_1 v1
-      [9] ldc #12
+      [9] ldc #13
         + String [isProxyServer]
       [11] iconst_0
-      [12] invokeinterface #57
+      [12] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [17] putstatic #32
+      [17] putstatic #27
         + Fieldref [com/cfun/proxy/a.a Z]
       [20] aload_1 v1
-      [21] ldc #8
+      [21] ldc #9
         + String [isBeforeURL]
       [23] iconst_0
-      [24] invokeinterface #57
+      [24] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [29] putstatic #33
+      [29] putstatic #28
         + Fieldref [com/cfun/proxy/a.b Z]
       [32] aload_1 v1
-      [33] ldc #17
-        + String [isReplaceURL]
+      [33] ldc #11
+        + String [isInsertHost]
       [35] iconst_0
-      [36] invokeinterface #57
+      [36] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [41] putstatic #34
+      [41] putstatic #29
         + Fieldref [com/cfun/proxy/a.c Z]
       [44] aload_1 v1
-      [45] ldc #18
-        + String [isSuffix]
+      [45] ldc #16
+        + String [isReplaceHost]
       [47] iconst_0
-      [48] invokeinterface #57
+      [48] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [53] putstatic #35
+      [53] putstatic #30
         + Fieldref [com/cfun/proxy/a.d Z]
       [56] aload_1 v1
-      [57] ldc #16
-        + String [isReplaceProtectVersion]
+      [57] ldc #14
+        + String [isReplaceAccept]
       [59] iconst_0
-      [60] invokeinterface #57
+      [60] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [65] putstatic #36
+      [65] putstatic #31
         + Fieldref [com/cfun/proxy/a.e Z]
       [68] aload_1 v1
-      [69] ldc #10
-        + String [isInsertHost]
+      [69] ldc #12
+        + String [isInsertX]
       [71] iconst_0
-      [72] invokeinterface #57
+      [72] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [77] putstatic #37
+      [77] putstatic #32
         + Fieldref [com/cfun/proxy/a.f Z]
       [80] aload_1 v1
-      [81] ldc #15
-        + String [isReplaceHost]
+      [81] ldc #17
+        + String [isXOnlineHost]
       [83] iconst_0
-      [84] invokeinterface #57
+      [84] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [89] putstatic #38
+      [89] putstatic #33
         + Fieldref [com/cfun/proxy/a.g Z]
       [92] aload_1 v1
-      [93] ldc #13
-        + String [isReplaceAccept]
+      [93] ldc #10
+        + String [isCustom]
       [95] iconst_0
-      [96] invokeinterface #57
+      [96] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [101] putstatic #39
+      [101] putstatic #34
         + Fieldref [com/cfun/proxy/a.h Z]
       [104] aload_1 v1
-      [105] ldc #11
-        + String [isInsertX]
+      [105] ldc #15
+        + String [isReplaceConnection]
       [107] iconst_0
-      [108] invokeinterface #57
+      [108] invokeinterface #47
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [113] putstatic #40
+      [113] putstatic #35
         + Fieldref [com/cfun/proxy/a.i Z]
       [116] aload_1 v1
-      [117] ldc #19
-        + String [isXOnlineHost]
-      [119] iconst_0
-      [120] invokeinterface #57
-        + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [125] putstatic #41
-        + Fieldref [com/cfun/proxy/a.j Z]
-      [128] aload_1 v1
-      [129] ldc #9
-        + String [isCustom]
-      [131] iconst_0
-      [132] invokeinterface #57
-        + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [137] putstatic #42
-        + Fieldref [com/cfun/proxy/a.k Z]
-      [140] aload_1 v1
-      [141] ldc #14
-        + String [isReplaceConnection]
-      [143] iconst_0
-      [144] invokeinterface #57
-        + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
-      [149] putstatic #43
-        + Fieldref [com/cfun/proxy/a.l Z]
-      [152] aload_1 v1
-      [153] ldc #20
+      [117] ldc #18
         + String [proxyServer]
-      [155] ldc #1
+      [119] ldc #1
         + String []
-      [157] invokeinterface #58
+      [121] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [162] putstatic #44
-        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
-      [165] aload_1 v1
-      [166] ldc #2
+      [126] putstatic #36
+        + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
+      [129] aload_1 v1
+      [130] ldc #2
         + String [beforeURL]
-      [168] ldc #1
+      [132] ldc #1
         + String []
-      [170] invokeinterface #58
+      [134] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [175] putstatic #45
-        + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
-      [178] aload_1 v1
-      [179] ldc #25
-        + String [replaceURL]
-      [181] ldc #1
+      [139] putstatic #37
+        + Fieldref [com/cfun/proxy/a.k Ljava/lang/String;]
+      [142] aload_1 v1
+      [143] ldc #6
+        + String [firstLinePattern]
+      [145] ldc #1
         + String []
-      [183] invokeinterface #58
+      [147] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [188] putstatic #46
-        + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
-      [191] aload_1 v1
-      [192] ldc #26
-        + String [suffix]
-      [194] ldc #1
-        + String []
-      [196] invokeinterface #58
-        + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [201] putstatic #47
-        + Fieldref [com/cfun/proxy/a.p Ljava/lang/String;]
-      [204] aload_1 v1
-      [205] ldc #24
-        + String [replaceProtectVersion]
-      [207] ldc #1
-        + String []
-      [209] invokeinterface #58
-        + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [214] putstatic #48
-        + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
-      [217] aload_1 v1
-      [218] ldc #6
+      [152] putstatic #38
+        + Fieldref [com/cfun/proxy/a.l Ljava/lang/String;]
+      [155] aload_1 v1
+      [156] ldc #7
         + String [insertHost]
-      [220] ldc #1
+      [158] ldc #1
         + String []
-      [222] invokeinterface #58
+      [160] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [227] putstatic #49
-        + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
-      [230] aload_1 v1
-      [231] ldc #23
+      [165] putstatic #39
+        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
+      [168] aload_1 v1
+      [169] ldc #21
         + String [replaceHost]
-      [233] ldc #1
+      [171] ldc #1
         + String []
-      [235] invokeinterface #58
+      [173] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [240] putstatic #50
-        + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
-      [243] aload_1 v1
-      [244] ldc #21
+      [178] putstatic #40
+        + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
+      [181] aload_1 v1
+      [182] ldc #19
         + String [replaceAccept]
-      [246] ldc #1
+      [184] ldc #1
         + String []
-      [248] invokeinterface #58
+      [186] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [253] putstatic #51
-        + Fieldref [com/cfun/proxy/a.t Ljava/lang/String;]
-      [256] aload_1 v1
-      [257] ldc #7
+      [191] putstatic #41
+        + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
+      [194] aload_1 v1
+      [195] ldc #8
         + String [insertX]
-      [259] ldc #1
+      [197] ldc #1
         + String []
-      [261] invokeinterface #58
+      [199] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [266] putstatic #52
-        + Fieldref [com/cfun/proxy/a.u Ljava/lang/String;]
-      [269] aload_1 v1
-      [270] ldc #27
+      [204] putstatic #42
+        + Fieldref [com/cfun/proxy/a.p Ljava/lang/String;]
+      [207] aload_1 v1
+      [208] ldc #22
         + String [xOnlineHost]
-      [272] ldc #1
+      [210] ldc #1
         + String []
-      [274] invokeinterface #58
+      [212] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [279] putstatic #53
-        + Fieldref [com/cfun/proxy/a.v Ljava/lang/String;]
-      [282] aload_1 v1
-      [283] ldc #5
+      [217] putstatic #43
+        + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
+      [220] aload_1 v1
+      [221] ldc #5
         + String [custom]
-      [285] ldc #1
+      [223] ldc #1
         + String []
-      [287] invokeinterface #58
+      [225] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [292] putstatic #54
-        + Fieldref [com/cfun/proxy/a.w Ljava/lang/String;]
-      [295] aload_1 v1
-      [296] ldc #22
+      [230] putstatic #44
+        + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
+      [233] aload_1 v1
+      [234] ldc #20
         + String [replaceConnection]
-      [298] ldc #3
+      [236] ldc #3
         + String [close]
-      [300] invokeinterface #58
+      [238] invokeinterface #48
         + InterfaceMethodref [android/content/SharedPreferences.getString (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [305] putstatic #55
-        + Fieldref [com/cfun/proxy/a.x Ljava/lang/String;]
-      [308] return
+      [243] putstatic #45
+        + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
+      [246] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -58115,7 +58033,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 376):
+Constant Pool (count = 358):
   + String []
   + String [
 ]
@@ -58123,23 +58041,25 @@ Constant Pool (count = 376):
 Connection: Keep-Alive
 
 ]
-  + String [%HOST%]
-  + String [%PORT%]
-  + String [%URI%]
-  + String [=a]
+  + String [&]
+  + String [?]
   + String [Connection: ]
   + String [GET http://]
   + String [Host: ]
   + String [URLEncode(]
   + String [X-Online-Host: ]
+  + String [[HOST]]
+  + String [[HTTP_VER]]
+  + String [[METHOD]]
+  + String [[PORT]]
+  + String [[SMART]]
+  + String [[URI]]
   + String [accept]
   + String [connection]
   + String [content-length]
   + String [host]
-  + String [http://]
   + String [iso8859-1]
   + String [x-online-host]
-  + Class [[B]
   + Class [com/cfun/proxy/a]
   + Class [com/cfun/proxy/a/a]
   + Class [com/cfun/proxy/a/c]
@@ -58172,9 +58092,9 @@ Connection: Keep-Alive
   + Fieldref [com/cfun/proxy/a.g Z]
   + Fieldref [com/cfun/proxy/a.h Z]
   + Fieldref [com/cfun/proxy/a.i Z]
-  + Fieldref [com/cfun/proxy/a.j Z]
-  + Fieldref [com/cfun/proxy/a.k Z]
-  + Fieldref [com/cfun/proxy/a.l Z]
+  + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
+  + Fieldref [com/cfun/proxy/a.k Ljava/lang/String;]
+  + Fieldref [com/cfun/proxy/a.l Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
@@ -58182,21 +58102,17 @@ Connection: Keep-Alive
   + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.t Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.u Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.v Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.w Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/a.x Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-  + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-  + Fieldref [com/cfun/proxy/c/a.c Ljava/lang/String;]
-  + Fieldref [com/cfun/proxy/c/a.d I]
+  + Fieldref [com/cfun/proxy/c/a.a [B]
+  + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+  + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+  + Fieldref [com/cfun/proxy/c/a.d Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/c/a.e I]
-  + Fieldref [com/cfun/proxy/c/a.f [B]
-  + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
+  + Fieldref [com/cfun/proxy/c/a.f I]
+  + Fieldref [com/cfun/proxy/c/a.g [B]
   + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
   + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
   + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
+  + Fieldref [com/cfun/proxy/c/b.a Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/c/b.b Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
   + Fieldref [com/cfun/proxy/c/b.d Ljava/lang/String;]
@@ -58213,6 +58129,7 @@ Connection: Keep-Alive
   + Methodref [com/cfun/proxy/b/a.g ()V]
   + Methodref [com/cfun/proxy/b/a.h ()Z]
   + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
+  + Methodref [com/cfun/proxy/c/a.a (Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
   + Methodref [com/cfun/proxy/c/a.b ()Z]
   + Methodref [com/cfun/proxy/c/a.c ()V]
   + Methodref [com/cfun/proxy/c/a.d ()V]
@@ -58220,8 +58137,7 @@ Connection: Keep-Alive
   + Methodref [com/cfun/proxy/c/a.f ()V]
   + Methodref [com/cfun/proxy/c/b.<init> (Ljava/lang/String;)V]
   + Methodref [com/cfun/proxy/c/b.a ()Ljava/lang/String;]
-  + Methodref [com/cfun/proxy/c/b.b ()Ljava/lang/String;]
-  + Methodref [com/cfun/proxy/c/b.c ()I]
+  + Methodref [com/cfun/proxy/c/b.b ()I]
   + Methodref [com/cfun/proxy/c/c.<init> (Lcom/cfun/proxy/b/a;)V]
   + Methodref [com/cfun/proxy/c/c.a ()V]
   + Methodref [com/cfun/proxy/c/c.interrupt ()V]
@@ -58236,7 +58152,6 @@ Connection: Keep-Alive
   + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
   + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
   + Methodref [java/lang/Object.<init> ()V]
-  + Methodref [java/lang/String.charAt (I)C]
   + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
   + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
   + Methodref [java/lang/String.indexOf (I)I]
@@ -58251,13 +58166,10 @@ Connection: Keep-Alive
   + Methodref [java/lang/String.trim ()Ljava/lang/String;]
   + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
   + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-  + Methodref [java/lang/StringBuilder.<init> ()V]
   + Methodref [java/lang/StringBuilder.<init> (I)V]
   + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
   + Methodref [java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-  + Methodref [java/lang/StringBuilder.delete (II)Ljava/lang/StringBuilder;]
-  + Methodref [java/lang/StringBuilder.length ()I]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
   + Methodref [java/net/InetAddress.getByName (Ljava/lang/String;)Ljava/net/InetAddress;]
   + Methodref [java/net/Socket.<init> (Ljava/lang/String;I)V]
@@ -58275,39 +58187,38 @@ Connection: Keep-Alive
   + NameAndType [a ()Ljava/lang/String;]
   + NameAndType [a ()V]
   + NameAndType [a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
-  + NameAndType [a Lcom/cfun/proxy/b/a;]
+  + NameAndType [a (Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
+  + NameAndType [a Ljava/lang/String;]
   + NameAndType [a Z]
+  + NameAndType [a [B]
   + NameAndType [append (C)Ljava/lang/StringBuilder;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-  + NameAndType [b ()Ljava/lang/String;]
+  + NameAndType [b ()I]
   + NameAndType [b ()Z]
   + NameAndType [b (Ljava/net/Socket;)V]
-  + NameAndType [b Lcom/cfun/proxy/c/b;]
+  + NameAndType [b Lcom/cfun/proxy/b/a;]
   + NameAndType [b Ljava/lang/String;]
   + NameAndType [b Z]
-  + NameAndType [c ()I]
   + NameAndType [c ()V]
+  + NameAndType [c Lcom/cfun/proxy/c/b;]
   + NameAndType [c Ljava/lang/String;]
   + NameAndType [c Z]
-  + NameAndType [charAt (I)C]
   + NameAndType [d ()Ljava/io/BufferedOutputStream;]
   + NameAndType [d ()V]
-  + NameAndType [d I]
   + NameAndType [d Ljava/lang/String;]
   + NameAndType [d Z]
-  + NameAndType [delete (II)Ljava/lang/StringBuilder;]
   + NameAndType [e ()V]
   + NameAndType [e I]
   + NameAndType [e Z]
   + NameAndType [encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
   + NameAndType [equals (Ljava/lang/Object;)Z]
   + NameAndType [f ()V]
+  + NameAndType [f I]
   + NameAndType [f Z]
-  + NameAndType [f [B]
   + NameAndType [flush ()V]
   + NameAndType [g ()V]
-  + NameAndType [g Ljava/lang/StringBuilder;]
   + NameAndType [g Z]
+  + NameAndType [g [B]
   + NameAndType [getByName (Ljava/lang/String;)Ljava/net/InetAddress;]
   + NameAndType [getBytes (Ljava/lang/String;)[B]
   + NameAndType [getMessage ()Ljava/lang/String;]
@@ -58321,9 +58232,9 @@ Connection: Keep-Alive
   + NameAndType [interrupt ()V]
   + NameAndType [isEmpty ()Z]
   + NameAndType [j Lcom/cfun/proxy/c/c;]
-  + NameAndType [j Z]
-  + NameAndType [k Z]
-  + NameAndType [l Z]
+  + NameAndType [j Ljava/lang/String;]
+  + NameAndType [k Ljava/lang/String;]
+  + NameAndType [l Ljava/lang/String;]
   + NameAndType [length ()I]
   + NameAndType [m Ljava/lang/String;]
   + NameAndType [n Ljava/lang/String;]
@@ -58342,18 +58253,13 @@ Connection: Keep-Alive
   + NameAndType [startsWith (Ljava/lang/String;)Z]
   + NameAndType [substring (I)Ljava/lang/String;]
   + NameAndType [substring (II)Ljava/lang/String;]
-  + NameAndType [t Ljava/lang/String;]
   + NameAndType [toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
   + NameAndType [toString ()Ljava/lang/String;]
   + NameAndType [trim ()Ljava/lang/String;]
-  + NameAndType [u Ljava/lang/String;]
-  + NameAndType [v Ljava/lang/String;]
   + NameAndType [valueOf (I)Ljava/lang/String;]
   + NameAndType [valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-  + NameAndType [w Ljava/lang/String;]
   + NameAndType [write ([B)V]
   + NameAndType [write ([BII)V]
-  + NameAndType [x Ljava/lang/String;]
   + Utf8 []
   + Utf8 [
 ]
@@ -58361,9 +58267,7 @@ Connection: Keep-Alive
 Connection: Keep-Alive
 
 ]
-  + Utf8 [%HOST%]
-  + Utf8 [%PORT%]
-  + Utf8 [%URI%]
+  + Utf8 [&]
   + Utf8 [()I]
   + Utf8 [()Ljava/io/BufferedInputStream;]
   + Utf8 [()Ljava/io/BufferedOutputStream;]
@@ -58371,12 +58275,10 @@ Connection: Keep-Alive
   + Utf8 [()V]
   + Utf8 [()Z]
   + Utf8 [(C)Ljava/lang/StringBuilder;]
-  + Utf8 [(I)C]
   + Utf8 [(I)I]
   + Utf8 [(I)Ljava/lang/String;]
   + Utf8 [(I)V]
   + Utf8 [(II)Ljava/lang/String;]
-  + Utf8 [(II)Ljava/lang/StringBuilder;]
   + Utf8 [(Lcom/cfun/proxy/b/a;)V]
   + Utf8 [(Lcom/cfun/proxy/b/a;Lcom/cfun/proxy/c/b;)V]
   + Utf8 [(Ljava/io/BufferedInputStream;)Ljava/lang/String;]
@@ -58390,6 +58292,7 @@ Connection: Keep-Alive
   + Utf8 [(Ljava/lang/String;)Z]
   + Utf8 [(Ljava/lang/String;)[B]
   + Utf8 [(Ljava/lang/String;I)V]
+  + Utf8 [(Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
   + Utf8 [(Ljava/net/InetAddress;I)V]
   + Utf8 [(Ljava/net/Socket;)V]
@@ -58398,7 +58301,7 @@ Connection: Keep-Alive
   + Utf8 [([BII)I]
   + Utf8 [([BII)V]
   + Utf8 [<init>]
-  + Utf8 [=a]
+  + Utf8 [?]
   + Utf8 [Code]
   + Utf8 [Connection: ]
   + Utf8 [ENGLISH]
@@ -58412,19 +58315,23 @@ Connection: Keep-Alive
   + Utf8 [Ljava/io/BufferedOutputStream;]
   + Utf8 [Ljava/io/PrintStream;]
   + Utf8 [Ljava/lang/String;]
-  + Utf8 [Ljava/lang/StringBuilder;]
   + Utf8 [Ljava/util/Locale;]
   + Utf8 [StackMapTable]
   + Utf8 [URLEncode(]
   + Utf8 [X-Online-Host: ]
   + Utf8 [Z]
   + Utf8 [[B]
+  + Utf8 [[HOST]]
+  + Utf8 [[HTTP_VER]]
+  + Utf8 [[METHOD]]
+  + Utf8 [[PORT]]
+  + Utf8 [[SMART]]
+  + Utf8 [[URI]]
   + Utf8 [a]
   + Utf8 [accept]
   + Utf8 [append]
   + Utf8 [b]
   + Utf8 [c]
-  + Utf8 [charAt]
   + Utf8 [com/cfun/proxy/a]
   + Utf8 [com/cfun/proxy/a/a]
   + Utf8 [com/cfun/proxy/a/c]
@@ -58437,7 +58344,6 @@ Connection: Keep-Alive
   + Utf8 [connection]
   + Utf8 [content-length]
   + Utf8 [d]
-  + Utf8 [delete]
   + Utf8 [e]
   + Utf8 [encode]
   + Utf8 [equals]
@@ -58449,7 +58355,6 @@ Connection: Keep-Alive
   + Utf8 [getMessage]
   + Utf8 [h]
   + Utf8 [host]
-  + Utf8 [http://]
   + Utf8 [i]
   + Utf8 [indexOf]
   + Utf8 [interrupt]
@@ -58488,116 +58393,116 @@ Connection: Keep-Alive
   + Utf8 [start]
   + Utf8 [startsWith]
   + Utf8 [substring]
-  + Utf8 [t]
   + Utf8 [toLowerCase]
   + Utf8 [toString]
   + Utf8 [trim]
-  + Utf8 [u]
-  + Utf8 [v]
   + Utf8 [valueOf]
-  + Utf8 [w]
   + Utf8 [write]
-  + Utf8 [x]
   + Utf8 [x-online-host]
 
 Fields (count = 10):
-  + Field:        a Lcom/cfun/proxy/b/a;
+  + Field:        b Lcom/cfun/proxy/b/a;
     Access flags: 0x2
-      = private com.cfun.proxy.b.a a
-  + Field:        b Lcom/cfun/proxy/c/b;
+      = private com.cfun.proxy.b.a b
+  + Field:        c Lcom/cfun/proxy/c/b;
     Access flags: 0x2
-      = private com.cfun.proxy.c.b b
-  + Field:        c Ljava/lang/String;
+      = private com.cfun.proxy.c.b c
+  + Field:        d Ljava/lang/String;
     Access flags: 0x2
-      = private java.lang.String c
-  + Field:        d I
-    Access flags: 0x2
-      = private int d
+      = private java.lang.String d
   + Field:        e I
     Access flags: 0x2
       = private int e
-  + Field:        f [B
+  + Field:        f I
     Access flags: 0x2
-      = private byte[] f
-  + Field:        g Ljava/lang/StringBuilder;
+      = private int f
+  + Field:        g [B
     Access flags: 0x2
-      = private java.lang.StringBuilder g
+      = private byte[] g
   + Field:        h Ljava/io/BufferedInputStream;
     Access flags: 0x2
       = private java.io.BufferedInputStream h
   + Field:        i Ljava/io/BufferedOutputStream;
     Access flags: 0x2
       = private java.io.BufferedOutputStream i
+  + Field:        a [B
+    Access flags: 0x0
+      = byte[] a
   + Field:        j Lcom/cfun/proxy/c/c;
     Access flags: 0x2
       = private com.cfun.proxy.c.c j
 
-Methods (count = 8):
+Methods (count = 9):
   - Method:       <init>(Lcom/cfun/proxy/b/a;)V
     Access flags: 0x1
       = public a(com.cfun.proxy.b.a)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 80, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 86, locals = 2, stack = 5):
       [0] aload_0 v0
-      [1] invokespecial #116
+      [1] invokespecial #114
         + Methodref [java/lang/Object.<init> ()V]
       [4] aload_0 v0
       [5] aconst_null
-      [6] putfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
+      [6] putfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
       [9] aload_0 v0
       [10] aconst_null
-      [11] putfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
+      [11] putfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
       [14] aload_0 v0
       [15] ldc #1
         + String []
-      [17] putfield #70
-        + Fieldref [com/cfun/proxy/c/a.c Ljava/lang/String;]
+      [17] putfield #68
+        + Fieldref [com/cfun/proxy/c/a.d Ljava/lang/String;]
       [20] aload_0 v0
       [21] bipush 80
-      [23] putfield #71
-        + Fieldref [com/cfun/proxy/c/a.d I]
+      [23] putfield #69
+        + Fieldref [com/cfun/proxy/c/a.e I]
       [26] aload_0 v0
       [27] iconst_0
-      [28] putfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
+      [28] putfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
       [31] aload_0 v0
       [32] sipush 10240
       [35] newarray 8
-      [37] putfield #73
-        + Fieldref [com/cfun/proxy/c/a.f [B]
+      [37] putfield #71
+        + Fieldref [com/cfun/proxy/c/a.g [B]
       [40] aload_0 v0
-      [41] new #37
-        + Class [java/lang/StringBuilder]
-      [44] dup
-      [45] invokespecial #132
-        + Methodref [java/lang/StringBuilder.<init> ()V]
-      [48] putfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [51] aload_0 v0
-      [52] aconst_null
-      [53] putfield #75
+      [41] aconst_null
+      [42] putfield #72
         + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [56] aload_0 v0
-      [57] aconst_null
-      [58] putfield #76
+      [45] aload_0 v0
+      [46] aconst_null
+      [47] putfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [61] aload_0 v0
-      [62] aconst_null
-      [63] putfield #77
+      [50] aload_0 v0
+      [51] iconst_2
+      [52] newarray 8
+      [54] dup
+      [55] iconst_0
+      [56] bipush 13
+      [58] bastore
+      [59] dup
+      [60] iconst_1
+      [61] bipush 10
+      [63] bastore
+      [64] putfield #65
+        + Fieldref [com/cfun/proxy/c/a.a [B]
+      [67] aload_0 v0
+      [68] aconst_null
+      [69] putfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [66] aload_0 v0
-      [67] aload_1 v1
-      [68] putfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [71] aload_0 v0
-      [72] aload_1 v1
-      [73] invokevirtual #88
+      [72] aload_0 v0
+      [73] aload_1 v1
+      [74] putfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [77] aload_0 v0
+      [78] aload_1 v1
+      [79] invokevirtual #86
         + Methodref [com/cfun/proxy/b/a.a ()Ljava/io/BufferedInputStream;]
-      [76] putfield #75
+      [82] putfield #72
         + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [79] return
+      [85] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a()V
@@ -58606,89 +58511,89 @@ Methods (count = 8):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 130, locals = 3, stack = 4):
       [0] aload_0 v0
-      [1] invokevirtual #94
+      [1] invokevirtual #93
         + Methodref [com/cfun/proxy/c/a.b ()Z]
       [4] istore_1 v1
       [5] iload_1 v1
       [6] ifeq +24 (target=30)
-      [9] new #29
+      [9] new #31
         + Class [com/cfun/proxy/c/d]
       [12] dup
       [13] aload_0 v0
-      [14] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
+      [14] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
       [17] aload_0 v0
-      [18] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [21] invokespecial #107
+      [18] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [21] invokespecial #105
         + Methodref [com/cfun/proxy/c/d.<init> (Lcom/cfun/proxy/b/a;Lcom/cfun/proxy/c/b;)V]
-      [24] invokevirtual #108
+      [24] invokevirtual #106
         + Methodref [com/cfun/proxy/c/d.a ()V]
       [27] goto +88 (target=115)
       [30] aload_0 v0
-      [31] invokevirtual #95
+      [31] invokevirtual #94
         + Methodref [com/cfun/proxy/c/a.c ()V]
       [34] aload_0 v0
-      [35] invokevirtual #96
+      [35] invokevirtual #95
         + Methodref [com/cfun/proxy/c/a.d ()V]
       [38] aload_0 v0
-      [39] invokevirtual #97
+      [39] invokevirtual #96
         + Methodref [com/cfun/proxy/c/a.e ()V]
       [42] aload_0 v0
-      [43] getfield #76
+      [43] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [46] invokevirtual #111
+      [46] invokevirtual #109
         + Methodref [java/io/BufferedOutputStream.flush ()V]
       [49] goto -49 (target=0)
       [52] astore_1 v1
-      [53] getstatic #83
+      [53] getstatic #81
         + Fieldref [java/lang/System.out Ljava/io/PrintStream;]
       [56] aload_1 v1
-      [57] invokevirtual #87
+      [57] invokevirtual #85
         + Methodref [com/cfun/proxy/a/d.getMessage ()Ljava/lang/String;]
-      [60] invokevirtual #114
+      [60] invokevirtual #112
         + Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [63] aload_0 v0
-      [64] getfield #77
+      [64] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [67] ifnull +62 (target=129)
       [70] aload_0 v0
-      [71] getfield #77
+      [71] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [74] invokevirtual #104
+      [74] invokevirtual #102
         + Methodref [com/cfun/proxy/c/c.a ()V]
       [77] goto +52 (target=129)
       [80] astore_1 v1
       [81] aload_0 v0
-      [82] getfield #77
+      [82] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [85] ifnull +44 (target=129)
       [88] aload_0 v0
-      [89] getfield #77
+      [89] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [92] invokevirtual #104
+      [92] invokevirtual #102
         + Methodref [com/cfun/proxy/c/c.a ()V]
       [95] goto +34 (target=129)
       [98] astore_2 v2
       [99] aload_0 v0
-      [100] getfield #77
+      [100] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [103] ifnull +10 (target=113)
       [106] aload_0 v0
-      [107] getfield #77
+      [107] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [110] invokevirtual #104
+      [110] invokevirtual #102
         + Methodref [com/cfun/proxy/c/c.a ()V]
       [113] aload_2 v2
       [114] athrow
       [115] aload_0 v0
-      [116] getfield #77
+      [116] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [119] ifnull +10 (target=129)
       [122] aload_0 v0
-      [123] getfield #77
+      [123] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [126] invokevirtual #104
+      [126] invokevirtual #102
         + Methodref [com/cfun/proxy/c/c.a ()V]
       [129] return
       Code attribute exceptions (count = 4):
@@ -58717,45 +58622,45 @@ Methods (count = 8):
     + Code attribute instructions (code length = 59, locals = 2, stack = 4):
       [0] aload_0 v0
       [1] aload_0 v0
-      [2] getfield #75
+      [2] getfield #72
         + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [5] invokevirtual #93
+      [5] invokevirtual #91
         + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
       [8] astore_1 v1
       [9] aload_1 v1
-      [10] invokevirtual #122
+      [10] invokevirtual #119
         + Methodref [java/lang/String.isEmpty ()Z]
       [13] ifeq +19 (target=32)
-      [16] new #22
+      [16] new #24
         + Class [com/cfun/proxy/a/a]
       [19] dup
       [20] aload_0 v0
       [21] aload_0 v0
-      [22] getfield #75
+      [22] getfield #72
         + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [25] invokevirtual #93
+      [25] invokevirtual #91
         + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
-      [28] invokespecial #85
+      [28] invokespecial #83
         + Methodref [com/cfun/proxy/a/a.<init> (Ljava/lang/String;)V]
       [31] athrow
       [32] aload_0 v0
-      [33] new #27
+      [33] new #29
         + Class [com/cfun/proxy/c/b]
       [36] dup
       [37] aload_1 v1
-      [38] invokevirtual #129
+      [38] invokevirtual #126
         + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [41] invokespecial #99
+      [41] invokespecial #98
         + Methodref [com/cfun/proxy/c/b.<init> (Ljava/lang/String;)V]
-      [44] putfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
+      [44] putfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
       [47] aload_0 v0
-      [48] invokevirtual #98
+      [48] invokevirtual #97
         + Methodref [com/cfun/proxy/c/a.f ()V]
       [51] aload_0 v0
-      [52] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [55] getfield #82
+      [52] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [55] getfield #80
         + Fieldref [com/cfun/proxy/c/b.f Z]
       [58] ireturn
       Code attribute exceptions (count = 0):
@@ -58766,624 +58671,525 @@ Methods (count = 8):
     Access flags: 0x4
       = protected void c()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 291, locals = 1, stack = 4):
-      [0] aload_0 v0
-      [1] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [4] iconst_0
-      [5] aload_0 v0
-      [6] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [9] invokevirtual #138
-        + Methodref [java/lang/StringBuilder.length ()I]
-      [12] invokevirtual #137
-        + Methodref [java/lang/StringBuilder.delete (II)Ljava/lang/StringBuilder;]
-      [15] pop
-      [16] getstatic #45
+    + Code attribute instructions (code length = 90, locals = 2, stack = 5):
+      [0] getstatic #47
         + Fieldref [com/cfun/proxy/a.b Z]
-      [19] ifeq +38 (target=57)
-      [22] aload_0 v0
-      [23] getfield #76
+      [3] ifeq +38 (target=41)
+      [6] aload_0 v0
+      [7] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [26] new #37
+      [10] new #39
         + Class [java/lang/StringBuilder]
-      [29] dup
-      [30] ldc #9
+      [13] dup
+      [14] ldc #7
         + String [GET http://]
-      [32] invokespecial #134
+      [16] invokespecial #130
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [35] getstatic #57
-        + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
-      [38] invokevirtual #136
+      [19] getstatic #56
+        + Fieldref [com/cfun/proxy/a.k Ljava/lang/String;]
+      [22] invokevirtual #132
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [41] ldc #3
+      [25] ldc #3
         + String [ HTTP/1.1
 Connection: Keep-Alive
 
 ]
-      [43] invokevirtual #136
+      [27] invokevirtual #132
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [46] invokevirtual #139
+      [30] invokevirtual #133
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [49] ldc #18
+      [33] ldc #21
         + String [iso8859-1]
-      [51] invokevirtual #119
+      [35] invokevirtual #116
         + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
-      [54] invokevirtual #112
+      [38] invokevirtual #110
         + Methodref [java/io/BufferedOutputStream.write ([B)V]
-      [57] aload_0 v0
-      [58] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [61] aload_0 v0
-      [62] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [65] invokevirtual #100
-        + Methodref [com/cfun/proxy/c/b.a ()Ljava/lang/String;]
-      [68] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [71] pop
-      [72] aload_0 v0
-      [73] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [76] bipush 32
-      [78] invokevirtual #135
-        + Methodref [java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;]
-      [81] pop
-      [82] getstatic #44
-        + Fieldref [com/cfun/proxy/a.a Z]
-      [85] ifeq +40 (target=125)
-      [88] aload_0 v0
-      [89] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [92] ldc #17
-        + String [http://]
-      [94] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [97] pop
-      [98] aload_0 v0
-      [99] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [102] getstatic #46
-        + Fieldref [com/cfun/proxy/a.c Z]
-      [105] ifeq +9 (target=114)
-      [108] getstatic #58
-        + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
-      [111] goto +10 (target=121)
-      [114] aload_0 v0
-      [115] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [118] invokevirtual #101
-        + Methodref [com/cfun/proxy/c/b.b ()Ljava/lang/String;]
-      [121] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [124] pop
-      [125] aload_0 v0
-      [126] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [129] aload_0 v0
-      [130] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [133] getfield #79
-        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
-      [136] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [139] pop
-      [140] getstatic #47
-        + Fieldref [com/cfun/proxy/a.d Z]
-      [143] ifeq +81 (target=224)
-      [146] aload_0 v0
-      [147] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [150] getfield #79
-        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
-      [153] aload_0 v0
-      [154] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [157] getfield #79
-        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
-      [160] invokevirtual #123
-        + Methodref [java/lang/String.length ()I]
-      [163] iconst_1
-      [164] isub
-      [165] invokevirtual #117
-        + Methodref [java/lang/String.charAt (I)C]
-      [168] bipush 63
-      [170] ificmpeq +33 (target=203)
-      [173] aload_0 v0
-      [174] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [177] aload_0 v0
-      [178] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [181] getfield #79
-        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
-      [184] bipush 63
-      [186] invokevirtual #120
-        + Methodref [java/lang/String.indexOf (I)I]
-      [189] ifle +8 (target=197)
-      [192] bipush 38
-      [194] goto +5 (target=199)
-      [197] bipush 63
-      [199] invokevirtual #135
-        + Methodref [java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;]
-      [202] pop
-      [203] aload_0 v0
-      [204] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [207] getstatic #59
-        + Fieldref [com/cfun/proxy/a.p Ljava/lang/String;]
-      [210] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [213] pop
-      [214] aload_0 v0
-      [215] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [218] ldc #7
-        + String [=a]
-      [220] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [223] pop
-      [224] aload_0 v0
-      [225] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [228] bipush 32
-      [230] invokevirtual #135
-        + Methodref [java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;]
-      [233] pop
-      [234] aload_0 v0
-      [235] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [238] getstatic #48
-        + Fieldref [com/cfun/proxy/a.e Z]
-      [241] ifeq +9 (target=250)
-      [244] getstatic #60
-        + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
-      [247] goto +10 (target=257)
-      [250] aload_0 v0
-      [251] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [254] getfield #80
-        + Fieldref [com/cfun/proxy/c/b.d Ljava/lang/String;]
-      [257] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [260] pop
-      [261] aload_0 v0
-      [262] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [265] ldc #2
-        + String [
-]
-      [267] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [270] pop
-      [271] aload_0 v0
-      [272] getfield #76
+      [41] aload_0 v0
+      [42] getstatic #57
+        + Fieldref [com/cfun/proxy/a.l Ljava/lang/String;]
+      [45] aload_0 v0
+      [46] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [49] iconst_1
+      [50] invokevirtual #92
+        + Methodref [com/cfun/proxy/c/a.a (Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
+      [53] astore_1 v1
+      [54] aload_0 v0
+      [55] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [275] aload_0 v0
-      [276] getfield #74
-        + Fieldref [com/cfun/proxy/c/a.g Ljava/lang/StringBuilder;]
-      [279] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [282] ldc #18
+      [58] aload_0 v0
+      [59] getstatic #57
+        + Fieldref [com/cfun/proxy/a.l Ljava/lang/String;]
+      [62] aload_0 v0
+      [63] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [66] iconst_1
+      [67] invokevirtual #92
+        + Methodref [com/cfun/proxy/c/a.a (Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
+      [70] ldc #21
         + String [iso8859-1]
-      [284] invokevirtual #119
+      [72] invokevirtual #116
         + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
-      [287] invokevirtual #112
+      [75] invokevirtual #110
         + Methodref [java/io/BufferedOutputStream.write ([B)V]
-      [290] return
+      [78] aload_0 v0
+      [79] getfield #73
+        + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
+      [82] aload_0 v0
+      [83] getfield #65
+        + Fieldref [com/cfun/proxy/c/a.a [B]
+      [86] invokevirtual #110
+        + Methodref [java/io/BufferedOutputStream.write ([B)V]
+      [89] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 10):
-        - [57] Var: ..., Stack: (empty)
-        - [114] Var: ..., Stack: [a:java/lang/StringBuilder]
-        - [121] Var: [a:com/cfun/proxy/c/a], Stack: [a:java/lang/StringBuilder][a:java/lang/String]
-        - [125] Var: ..., Stack: (empty)
-        - [197] Var: ..., Stack: [a:java/lang/StringBuilder]
-        - [199] Var: [a:com/cfun/proxy/c/a], Stack: [a:java/lang/StringBuilder][i]
-        - [203] Var: ..., Stack: (empty)
-        - [224] Var: ..., Stack: (empty)
-        - [250] Var: ..., Stack: [a:java/lang/StringBuilder]
-        - [257] Var: [a:com/cfun/proxy/c/a], Stack: [a:java/lang/StringBuilder][a:java/lang/String]
+      + Stack map table attribute (count = 1):
+        - [41] Var: ..., Stack: (empty)
+  + Method:       a(Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;
+    Access flags: 0x4
+      = protected java.lang.String a(java.lang.String,com.cfun.proxy.c.b,boolean)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 206, locals = 10, stack = 3):
+      [0] aload_1 v1
+      [1] ldc #13
+        + String [[METHOD]]
+      [3] aload_0 v0
+      [4] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [7] getfield #75
+        + Fieldref [com/cfun/proxy/c/b.a Ljava/lang/String;]
+      [10] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [13] ldc #11
+        + String [[HOST]]
+      [15] aload_0 v0
+      [16] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [19] getfield #76
+        + Fieldref [com/cfun/proxy/c/b.b Ljava/lang/String;]
+      [22] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [25] ldc #14
+        + String [[PORT]]
+      [27] aload_0 v0
+      [28] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [31] getfield #79
+        + Fieldref [com/cfun/proxy/c/b.e I]
+      [34] invokestatic #127
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [37] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [40] ldc #16
+        + String [[URI]]
+      [42] aload_0 v0
+      [43] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [46] getfield #77
+        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
+      [49] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [52] ldc #12
+        + String [[HTTP_VER]]
+      [54] aload_0 v0
+      [55] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [58] getfield #78
+        + Fieldref [com/cfun/proxy/c/b.d Ljava/lang/String;]
+      [61] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [64] astore v4
+      [66] iload_3 v3
+      [67] ifeq +35 (target=102)
+      [70] aload_2 v2
+      [71] getfield #77
+        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
+      [74] bipush 63
+      [76] invokevirtual #117
+        + Methodref [java/lang/String.indexOf (I)I]
+      [79] ifle +8 (target=87)
+      [82] ldc #4
+        + String [&]
+      [84] goto +5 (target=89)
+      [87] ldc #5
+        + String [?]
+      [89] astore v5
+      [91] aload v4
+      [93] ldc #15
+        + String [[SMART]]
+      [95] aload v5
+      [97] invokevirtual #121
+        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
+      [100] astore v4
+      [102] aload v4
+      [104] ldc #9
+        + String [URLEncode(]
+      [106] invokevirtual #118
+        + Methodref [java/lang/String.indexOf (Ljava/lang/String;)I]
+      [109] istore v5
+      [111] aload v4
+      [113] bipush 41
+      [115] invokevirtual #117
+        + Methodref [java/lang/String.indexOf (I)I]
+      [118] istore v6
+      [120] iload v5
+      [122] iconst_m1
+      [123] ificmple +80 (target=203)
+      [126] iload v6
+      [128] iload v5
+      [130] bipush 10
+      [132] iadd
+      [133] ificmplt +70 (target=203)
+      [136] aload v4
+      [138] iconst_0
+      [139] iload v5
+      [141] invokevirtual #124
+        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
+      [144] astore v7
+      [146] aload v4
+      [148] iload v5
+      [150] bipush 10
+      [152] iadd
+      [153] iload v6
+      [155] invokevirtual #124
+        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
+      [158] astore v8
+      [160] aload v4
+      [162] iload v6
+      [164] iconst_1
+      [165] iadd
+      [166] invokevirtual #123
+        + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
+      [169] astore v9
+      [171] new #39
+        + Class [java/lang/StringBuilder]
+      [174] dup
+      [175] aload v7
+      [177] invokestatic #128
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [180] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [183] aload v8
+      [185] ldc #21
+        + String [iso8859-1]
+      [187] invokestatic #137
+        + Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+      [190] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [193] aload v9
+      [195] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [198] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [201] astore v4
+      [203] aload v4
+      [205] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Stack map table attribute (count = 4):
+        - [87] Var: ...[a:java/lang/String], Stack: (empty)
+        - [89] Var: ..., Stack: [a:java/lang/String]
+        - [102] Var: ..., Stack: (empty)
+        - [203] Var: ...[i][i], Stack: (empty)
   + Method:       d()V
     Access flags: 0x4
       = protected void d()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 530, locals = 7, stack = 4):
-      [0] getstatic #54
-        + Fieldref [com/cfun/proxy/a.k Z]
-      [3] ifeq +163 (target=166)
-      [6] getstatic #66
-        + Fieldref [com/cfun/proxy/a.w Ljava/lang/String;]
-      [9] ldc #4
-        + String [%HOST%]
-      [11] aload_0 v0
-      [12] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [15] getfield #78
-        + Fieldref [com/cfun/proxy/c/b.b Ljava/lang/String;]
-      [18] invokevirtual #124
-        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
-      [21] ldc #5
-        + String [%PORT%]
-      [23] aload_0 v0
-      [24] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [27] getfield #81
-        + Fieldref [com/cfun/proxy/c/b.e I]
-      [30] invokestatic #130
-        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [33] invokevirtual #124
-        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
-      [36] ldc #6
-        + String [%URI%]
-      [38] aload_0 v0
-      [39] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [42] getfield #79
-        + Fieldref [com/cfun/proxy/c/b.c Ljava/lang/String;]
-      [45] invokevirtual #124
-        + Methodref [java/lang/String.replace (Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;]
-      [48] astore_1 v1
-      [49] aload_1 v1
-      [50] ldc #11
-        + String [URLEncode(]
-      [52] invokevirtual #121
-        + Methodref [java/lang/String.indexOf (Ljava/lang/String;)I]
-      [55] istore_2 v2
-      [56] aload_1 v1
-      [57] bipush 41
-      [59] invokevirtual #120
-        + Methodref [java/lang/String.indexOf (I)I]
-      [62] istore_3 v3
-      [63] iload_2 v2
-      [64] iconst_m1
-      [65] ificmple +70 (target=135)
-      [68] iload_3 v3
-      [69] iload_2 v2
-      [70] bipush 10
-      [72] iadd
-      [73] ificmplt +62 (target=135)
-      [76] aload_1 v1
-      [77] iconst_0
-      [78] iload_2 v2
-      [79] invokevirtual #127
-        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [82] astore v4
-      [84] aload_1 v1
-      [85] iload_2 v2
-      [86] bipush 10
-      [88] iadd
-      [89] iload_3 v3
-      [90] invokevirtual #127
-        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [93] astore v5
-      [95] aload_1 v1
-      [96] iload_3 v3
-      [97] iconst_1
-      [98] iadd
-      [99] invokevirtual #126
-        + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
-      [102] astore v6
-      [104] new #37
-        + Class [java/lang/StringBuilder]
-      [107] dup
-      [108] aload v4
-      [110] invokestatic #131
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [113] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [116] aload v5
-      [118] ldc #18
-        + String [iso8859-1]
-      [120] invokestatic #143
-        + Methodref [java/net/URLEncoder.encode (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
-      [123] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [126] aload v6
-      [128] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [131] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [134] astore_1 v1
-      [135] aload_0 v0
-      [136] getfield #76
-        + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [139] new #37
-        + Class [java/lang/StringBuilder]
-      [142] dup
-      [143] aload_1 v1
-      [144] invokestatic #131
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [147] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [150] ldc #2
-        + String [
-]
-      [152] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [155] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [158] ldc #18
-        + String [iso8859-1]
-      [160] invokevirtual #119
-        + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
-      [163] invokevirtual #112
-        + Methodref [java/io/BufferedOutputStream.write ([B)V]
-      [166] aload_0 v0
-      [167] iconst_0
-      [168] putfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
-      [171] iconst_2
-      [172] newarray 8
-      [174] dup
-      [175] iconst_0
-      [176] bipush 13
-      [178] bastore
-      [179] dup
-      [180] iconst_1
-      [181] bipush 10
-      [183] bastore
-      [184] astore_1 v1
-      [185] aload_0 v0
-      [186] aload_0 v0
-      [187] getfield #75
-        + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [190] invokevirtual #93
-        + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
-      [193] astore_2 v2
-      [194] goto +319 (target=513)
-      [197] aconst_null
-      [198] astore_3 v3
-      [199] aload_2 v2
-      [200] invokevirtual #123
-        + Methodref [java/lang/String.length ()I]
-      [203] bipush 14
-      [205] ificmple +19 (target=224)
-      [208] aload_2 v2
-      [209] iconst_0
-      [210] bipush 14
-      [212] invokevirtual #127
-        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [215] getstatic #84
-        + Fieldref [java/util/Locale.ENGLISH Ljava/util/Locale;]
-      [218] invokevirtual #128
-        + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
-      [221] goto +10 (target=231)
-      [224] aload_2 v2
-      [225] getstatic #84
-        + Fieldref [java/util/Locale.ENGLISH Ljava/util/Locale;]
-      [228] invokevirtual #128
-        + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
-      [231] astore_3 v3
-      [232] aload_3 v3
-      [233] ldc #15
-        + String [content-length]
-      [235] invokevirtual #125
-        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [238] ifeq +22 (target=260)
-      [241] aload_0 v0
-      [242] aload_2 v2
-      [243] bipush 15
-      [245] invokevirtual #126
-        + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
-      [248] invokevirtual #129
-        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
-      [251] invokestatic #115
-        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
-      [254] putfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
-      [257] goto +234 (target=491)
-      [260] aload_3 v3
-      [261] ldc #16
-        + String [host]
-      [263] invokevirtual #125
-        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [266] ifeq +70 (target=336)
-      [269] getstatic #50
-        + Fieldref [com/cfun/proxy/a.g Z]
-      [272] ifeq +27 (target=299)
-      [275] new #37
-        + Class [java/lang/StringBuilder]
-      [278] dup
-      [279] ldc #10
-        + String [Host: ]
-      [281] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [284] getstatic #62
-        + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
-      [287] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [290] ldc #2
-        + String [
-]
-      [292] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [295] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [298] astore_2 v2
-      [299] getstatic #49
-        + Fieldref [com/cfun/proxy/a.f Z]
-      [302] ifeq +189 (target=491)
-      [305] new #37
-        + Class [java/lang/StringBuilder]
-      [308] dup
-      [309] ldc #10
-        + String [Host: ]
-      [311] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [314] getstatic #61
-        + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
-      [317] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [320] ldc #2
-        + String [
-]
-      [322] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [325] aload_2 v2
-      [326] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [329] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [332] astore_2 v2
-      [333] goto +158 (target=491)
-      [336] aload_3 v3
-      [337] ldc #13
-        + String [accept]
-      [339] invokevirtual #125
-        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [342] ifeq +34 (target=376)
-      [345] getstatic #51
+    + Code attribute instructions (code length = 394, locals = 3, stack = 5):
+      [0] aload_0 v0
+      [1] iconst_0
+      [2] putfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
+      [5] getstatic #53
         + Fieldref [com/cfun/proxy/a.h Z]
-      [348] ifeq +143 (target=491)
-      [351] new #37
-        + Class [java/lang/StringBuilder]
-      [354] dup
-      [355] getstatic #63
-        + Fieldref [com/cfun/proxy/a.t Ljava/lang/String;]
-      [358] invokestatic #131
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [361] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [364] ldc #2
-        + String [
-]
-      [366] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [369] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [372] astore_2 v2
-      [373] goto +118 (target=491)
-      [376] aload_3 v3
-      [377] ldc #14
-        + String [connection]
-      [379] invokevirtual #125
-        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [382] ifeq +36 (target=418)
-      [385] getstatic #55
-        + Fieldref [com/cfun/proxy/a.l Z]
-      [388] ifeq +103 (target=491)
-      [391] new #37
-        + Class [java/lang/StringBuilder]
-      [394] dup
-      [395] ldc #8
-        + String [Connection: ]
-      [397] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [400] getstatic #67
-        + Fieldref [com/cfun/proxy/a.x Ljava/lang/String;]
-      [403] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [406] ldc #2
-        + String [
-]
-      [408] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [411] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [414] astore_2 v2
-      [415] goto +76 (target=491)
-      [418] aload_3 v3
-      [419] ldc #19
-        + String [x-online-host]
-      [421] invokevirtual #125
-        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [424] ifeq +67 (target=491)
-      [427] getstatic #53
-        + Fieldref [com/cfun/proxy/a.j Z]
-      [430] ifeq +27 (target=457)
-      [433] new #37
-        + Class [java/lang/StringBuilder]
-      [436] dup
-      [437] ldc #12
-        + String [X-Online-Host: ]
-      [439] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [442] getstatic #65
-        + Fieldref [com/cfun/proxy/a.v Ljava/lang/String;]
-      [445] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [448] ldc #2
-        + String [
-]
-      [450] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [453] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [456] astore_2 v2
-      [457] getstatic #52
-        + Fieldref [com/cfun/proxy/a.i Z]
-      [460] ifeq +31 (target=491)
-      [463] new #37
-        + Class [java/lang/StringBuilder]
-      [466] dup
-      [467] ldc #12
-        + String [X-Online-Host: ]
-      [469] invokespecial #134
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [472] getstatic #64
-        + Fieldref [com/cfun/proxy/a.u Ljava/lang/String;]
-      [475] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [478] ldc #2
-        + String [
-]
-      [480] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [483] aload_2 v2
-      [484] invokevirtual #136
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [487] invokevirtual #139
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [490] astore_2 v2
-      [491] aload_0 v0
-      [492] getfield #76
+      [8] ifeq +38 (target=46)
+      [11] aload_0 v0
+      [12] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [495] aload_2 v2
-      [496] ldc #18
+      [15] aload_0 v0
+      [16] getstatic #63
+        + Fieldref [com/cfun/proxy/a.r Ljava/lang/String;]
+      [19] aload_0 v0
+      [20] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [23] iconst_0
+      [24] invokevirtual #92
+        + Methodref [com/cfun/proxy/c/a.a (Ljava/lang/String;Lcom/cfun/proxy/c/b;Z)Ljava/lang/String;]
+      [27] ldc #21
         + String [iso8859-1]
-      [498] invokevirtual #119
+      [29] invokevirtual #116
         + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
-      [501] invokevirtual #112
+      [32] invokevirtual #110
         + Methodref [java/io/BufferedOutputStream.write ([B)V]
-      [504] aload_0 v0
-      [505] aload_0 v0
-      [506] getfield #75
-        + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
-      [509] invokevirtual #93
-        + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
-      [512] astore_2 v2
-      [513] aload_2 v2
-      [514] invokevirtual #123
-        + Methodref [java/lang/String.length ()I]
-      [517] iconst_2
-      [518] ificmpgt -321 (target=197)
-      [521] aload_0 v0
-      [522] getfield #76
+      [35] aload_0 v0
+      [36] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
-      [525] aload_1 v1
-      [526] invokevirtual #112
+      [39] aload_0 v0
+      [40] getfield #65
+        + Fieldref [com/cfun/proxy/c/a.a [B]
+      [43] invokevirtual #110
         + Methodref [java/io/BufferedOutputStream.write ([B)V]
-      [529] return
+      [46] aload_0 v0
+      [47] aload_0 v0
+      [48] getfield #72
+        + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
+      [51] invokevirtual #91
+        + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
+      [54] astore_1 v1
+      [55] goto +319 (target=374)
+      [58] aconst_null
+      [59] astore_2 v2
+      [60] aload_1 v1
+      [61] invokevirtual #120
+        + Methodref [java/lang/String.length ()I]
+      [64] bipush 14
+      [66] ificmple +19 (target=85)
+      [69] aload_1 v1
+      [70] iconst_0
+      [71] bipush 14
+      [73] invokevirtual #124
+        + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
+      [76] getstatic #82
+        + Fieldref [java/util/Locale.ENGLISH Ljava/util/Locale;]
+      [79] invokevirtual #125
+        + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
+      [82] goto +10 (target=92)
+      [85] aload_1 v1
+      [86] getstatic #82
+        + Fieldref [java/util/Locale.ENGLISH Ljava/util/Locale;]
+      [89] invokevirtual #125
+        + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
+      [92] astore_2 v2
+      [93] aload_2 v2
+      [94] ldc #19
+        + String [content-length]
+      [96] invokevirtual #122
+        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [99] ifeq +22 (target=121)
+      [102] aload_0 v0
+      [103] aload_1 v1
+      [104] bipush 15
+      [106] invokevirtual #123
+        + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
+      [109] invokevirtual #126
+        + Methodref [java/lang/String.trim ()Ljava/lang/String;]
+      [112] invokestatic #113
+        + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
+      [115] putfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
+      [118] goto +234 (target=352)
+      [121] aload_2 v2
+      [122] ldc #20
+        + String [host]
+      [124] invokevirtual #122
+        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [127] ifeq +70 (target=197)
+      [130] getstatic #49
+        + Fieldref [com/cfun/proxy/a.d Z]
+      [133] ifeq +27 (target=160)
+      [136] new #39
+        + Class [java/lang/StringBuilder]
+      [139] dup
+      [140] ldc #8
+        + String [Host: ]
+      [142] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [145] getstatic #59
+        + Fieldref [com/cfun/proxy/a.n Ljava/lang/String;]
+      [148] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [151] ldc #2
+        + String [
+]
+      [153] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [156] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [159] astore_1 v1
+      [160] getstatic #48
+        + Fieldref [com/cfun/proxy/a.c Z]
+      [163] ifeq +189 (target=352)
+      [166] new #39
+        + Class [java/lang/StringBuilder]
+      [169] dup
+      [170] ldc #8
+        + String [Host: ]
+      [172] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [175] getstatic #58
+        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
+      [178] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [181] ldc #2
+        + String [
+]
+      [183] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [186] aload_1 v1
+      [187] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [190] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [193] astore_1 v1
+      [194] goto +158 (target=352)
+      [197] aload_2 v2
+      [198] ldc #17
+        + String [accept]
+      [200] invokevirtual #122
+        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [203] ifeq +34 (target=237)
+      [206] getstatic #50
+        + Fieldref [com/cfun/proxy/a.e Z]
+      [209] ifeq +143 (target=352)
+      [212] new #39
+        + Class [java/lang/StringBuilder]
+      [215] dup
+      [216] getstatic #60
+        + Fieldref [com/cfun/proxy/a.o Ljava/lang/String;]
+      [219] invokestatic #128
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [222] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [225] ldc #2
+        + String [
+]
+      [227] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [230] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [233] astore_1 v1
+      [234] goto +118 (target=352)
+      [237] aload_2 v2
+      [238] ldc #18
+        + String [connection]
+      [240] invokevirtual #122
+        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [243] ifeq +36 (target=279)
+      [246] getstatic #54
+        + Fieldref [com/cfun/proxy/a.i Z]
+      [249] ifeq +103 (target=352)
+      [252] new #39
+        + Class [java/lang/StringBuilder]
+      [255] dup
+      [256] ldc #6
+        + String [Connection: ]
+      [258] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [261] getstatic #64
+        + Fieldref [com/cfun/proxy/a.s Ljava/lang/String;]
+      [264] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [267] ldc #2
+        + String [
+]
+      [269] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [272] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [275] astore_1 v1
+      [276] goto +76 (target=352)
+      [279] aload_2 v2
+      [280] ldc #22
+        + String [x-online-host]
+      [282] invokevirtual #122
+        + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
+      [285] ifeq +67 (target=352)
+      [288] getstatic #52
+        + Fieldref [com/cfun/proxy/a.g Z]
+      [291] ifeq +27 (target=318)
+      [294] new #39
+        + Class [java/lang/StringBuilder]
+      [297] dup
+      [298] ldc #10
+        + String [X-Online-Host: ]
+      [300] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [303] getstatic #62
+        + Fieldref [com/cfun/proxy/a.q Ljava/lang/String;]
+      [306] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [309] ldc #2
+        + String [
+]
+      [311] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [314] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [317] astore_1 v1
+      [318] getstatic #51
+        + Fieldref [com/cfun/proxy/a.f Z]
+      [321] ifeq +31 (target=352)
+      [324] new #39
+        + Class [java/lang/StringBuilder]
+      [327] dup
+      [328] ldc #10
+        + String [X-Online-Host: ]
+      [330] invokespecial #130
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [333] getstatic #61
+        + Fieldref [com/cfun/proxy/a.p Ljava/lang/String;]
+      [336] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [339] ldc #2
+        + String [
+]
+      [341] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [344] aload_1 v1
+      [345] invokevirtual #132
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [348] invokevirtual #133
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [351] astore_1 v1
+      [352] aload_0 v0
+      [353] getfield #73
+        + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
+      [356] aload_1 v1
+      [357] ldc #21
+        + String [iso8859-1]
+      [359] invokevirtual #116
+        + Methodref [java/lang/String.getBytes (Ljava/lang/String;)[B]
+      [362] invokevirtual #110
+        + Methodref [java/io/BufferedOutputStream.write ([B)V]
+      [365] aload_0 v0
+      [366] aload_0 v0
+      [367] getfield #72
+        + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
+      [370] invokevirtual #91
+        + Methodref [com/cfun/proxy/c/a.a (Ljava/io/BufferedInputStream;)Ljava/lang/String;]
+      [373] astore_1 v1
+      [374] aload_1 v1
+      [375] invokevirtual #120
+        + Methodref [java/lang/String.length ()I]
+      [378] iconst_2
+      [379] ificmpgt -321 (target=58)
+      [382] aload_0 v0
+      [383] getfield #73
+        + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
+      [386] aload_0 v0
+      [387] getfield #65
+        + Fieldref [com/cfun/proxy/c/a.a [B]
+      [390] invokevirtual #110
+        + Methodref [java/io/BufferedOutputStream.write ([B)V]
+      [393] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Stack map table attribute (count = 16):
-        - [135] Var: ...[a:java/lang/String][i][i], Stack: (empty)
-        - [166] Var: -3, Stack: (empty)
-        - [197] Var: ...[a:[B][a:java/lang/String], Stack: (empty)
-        - [224] Var: ...[a:java/lang/String], Stack: (empty)
-        - [231] Var: ..., Stack: [a:java/lang/String]
-        - [260] Var: ..., Stack: (empty)
-        - [299] Var: ..., Stack: (empty)
-        - [333] Var: ..., Stack: (empty)
-        - [336] Var: ..., Stack: (empty)
-        - [373] Var: ..., Stack: (empty)
-        - [376] Var: ..., Stack: (empty)
-        - [415] Var: ..., Stack: (empty)
-        - [418] Var: ..., Stack: (empty)
-        - [457] Var: ..., Stack: (empty)
-        - [491] Var: ..., Stack: (empty)
-        - [513] Var: -1, Stack: (empty)
+      + Stack map table attribute (count = 15):
+        - [46] Var: ..., Stack: (empty)
+        - [58] Var: ...[a:java/lang/String], Stack: (empty)
+        - [85] Var: ...[a:java/lang/String], Stack: (empty)
+        - [92] Var: ..., Stack: [a:java/lang/String]
+        - [121] Var: ..., Stack: (empty)
+        - [160] Var: ..., Stack: (empty)
+        - [194] Var: ..., Stack: (empty)
+        - [197] Var: ..., Stack: (empty)
+        - [234] Var: ..., Stack: (empty)
+        - [237] Var: ..., Stack: (empty)
+        - [276] Var: ..., Stack: (empty)
+        - [279] Var: ..., Stack: (empty)
+        - [318] Var: ..., Stack: (empty)
+        - [352] Var: ..., Stack: (empty)
+        - [374] Var: -1, Stack: (empty)
   + Method:       e()V
     Access flags: 0x4
       = protected void e()
@@ -59391,39 +59197,39 @@ Connection: Keep-Alive
     + Code attribute instructions (code length = 51, locals = 2, stack = 4):
       [0] goto +43 (target=43)
       [3] aload_0 v0
-      [4] getfield #75
+      [4] getfield #72
         + Fieldref [com/cfun/proxy/c/a.h Ljava/io/BufferedInputStream;]
       [7] aload_0 v0
-      [8] getfield #73
-        + Fieldref [com/cfun/proxy/c/a.f [B]
+      [8] getfield #71
+        + Fieldref [com/cfun/proxy/c/a.g [B]
       [11] iconst_0
       [12] aload_0 v0
-      [13] getfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
-      [16] invokevirtual #110
+      [13] getfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
+      [16] invokevirtual #108
         + Methodref [java/io/BufferedInputStream.read ([BII)I]
       [19] istore_1 v1
       [20] aload_0 v0
       [21] dup
-      [22] getfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
+      [22] getfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
       [25] iload_1 v1
       [26] isub
-      [27] putfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
+      [27] putfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
       [30] aload_0 v0
-      [31] getfield #76
+      [31] getfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
       [34] aload_0 v0
-      [35] getfield #73
-        + Fieldref [com/cfun/proxy/c/a.f [B]
+      [35] getfield #71
+        + Fieldref [com/cfun/proxy/c/a.g [B]
       [38] iconst_0
       [39] iload_1 v1
-      [40] invokevirtual #113
+      [40] invokevirtual #111
         + Methodref [java/io/BufferedOutputStream.write ([BII)V]
       [43] aload_0 v0
-      [44] getfield #72
-        + Fieldref [com/cfun/proxy/c/a.e I]
+      [44] getfield #70
+        + Fieldref [com/cfun/proxy/c/a.f I]
       [47] ifgt -44 (target=3)
       [50] return
       Code attribute exceptions (count = 0):
@@ -59438,16 +59244,16 @@ Connection: Keep-Alive
     + Code attribute instructions (code length = 44, locals = 4, stack = 3):
       [0] iconst_0
       [1] istore_2 v2
-      [2] new #37
+      [2] new #39
         + Class [java/lang/StringBuilder]
       [5] dup
       [6] sipush 128
-      [9] invokespecial #133
+      [9] invokespecial #129
         + Methodref [java/lang/StringBuilder.<init> (I)V]
       [12] astore_3 v3
       [13] goto +20 (target=33)
       [16] aload_1 v1
-      [17] invokevirtual #109
+      [17] invokevirtual #107
         + Methodref [java/io/BufferedInputStream.read ()I]
       [20] istore_2 v2
       [21] iload_2 v2
@@ -59456,14 +59262,14 @@ Connection: Keep-Alive
       [26] aload_3 v3
       [27] iload_2 v2
       [28] i2c
-      [29] invokevirtual #135
+      [29] invokevirtual #131
         + Methodref [java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;]
       [32] pop
       [33] iload_2 v2
       [34] bipush 10
       [36] ificmpne -20 (target=16)
       [39] aload_3 v3
-      [40] invokevirtual #139
+      [40] invokevirtual #133
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [43] areturn
       Code attribute exceptions (count = 0):
@@ -59478,188 +59284,188 @@ Connection: Keep-Alive
       = protected void f()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 264, locals = 2, stack = 7):
-      [0] getstatic #44
+      [0] getstatic #46
         + Fieldref [com/cfun/proxy/a.a Z]
       [3] ifeq +92 (target=95)
       [6] aload_0 v0
-      [7] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [10] invokevirtual #92
+      [7] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [10] invokevirtual #90
         + Methodref [com/cfun/proxy/b/a.h ()Z]
       [13] ifne +250 (target=263)
-      [16] getstatic #56
-        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
+      [16] getstatic #55
+        + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
       [19] bipush 58
-      [21] invokevirtual #120
+      [21] invokevirtual #117
         + Methodref [java/lang/String.indexOf (I)I]
       [24] istore_1 v1
       [25] aload_0 v0
-      [26] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [29] new #41
+      [26] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [29] new #43
         + Class [java/net/Socket]
       [32] dup
-      [33] getstatic #56
-        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
+      [33] getstatic #55
+        + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
       [36] iconst_0
       [37] iload_1 v1
-      [38] invokevirtual #127
+      [38] invokevirtual #124
         + Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [41] getstatic #56
-        + Fieldref [com/cfun/proxy/a.m Ljava/lang/String;]
+      [41] getstatic #55
+        + Fieldref [com/cfun/proxy/a.j Ljava/lang/String;]
       [44] iload_1 v1
       [45] iconst_1
       [46] iadd
-      [47] invokevirtual #126
+      [47] invokevirtual #123
         + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
-      [50] invokestatic #115
+      [50] invokestatic #113
         + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
-      [53] invokespecial #141
+      [53] invokespecial #135
         + Methodref [java/net/Socket.<init> (Ljava/lang/String;I)V]
-      [56] invokevirtual #89
+      [56] invokevirtual #87
         + Methodref [com/cfun/proxy/b/a.b (Ljava/net/Socket;)V]
       [59] aload_0 v0
-      [60] new #28
+      [60] new #30
         + Class [com/cfun/proxy/c/c]
       [63] dup
       [64] aload_0 v0
-      [65] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [68] invokespecial #103
+      [65] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [68] invokespecial #101
         + Methodref [com/cfun/proxy/c/c.<init> (Lcom/cfun/proxy/b/a;)V]
-      [71] putfield #77
+      [71] putfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [74] aload_0 v0
-      [75] getfield #77
+      [75] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [78] invokevirtual #106
+      [78] invokevirtual #104
         + Methodref [com/cfun/proxy/c/c.start ()V]
       [81] aload_0 v0
       [82] aload_0 v0
-      [83] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [86] invokevirtual #90
+      [83] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [86] invokevirtual #88
         + Methodref [com/cfun/proxy/b/a.d ()Ljava/io/BufferedOutputStream;]
-      [89] putfield #76
+      [89] putfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
       [92] goto +171 (target=263)
       [95] aload_0 v0
-      [96] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [99] invokevirtual #101
-        + Methodref [com/cfun/proxy/c/b.b ()Ljava/lang/String;]
-      [102] invokevirtual #122
+      [96] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [99] invokevirtual #99
+        + Methodref [com/cfun/proxy/c/b.a ()Ljava/lang/String;]
+      [102] invokevirtual #119
         + Methodref [java/lang/String.isEmpty ()Z]
       [105] ifeq +11 (target=116)
-      [108] new #23
+      [108] new #25
         + Class [com/cfun/proxy/a/c]
       [111] dup
-      [112] invokespecial #86
+      [112] invokespecial #84
         + Methodref [com/cfun/proxy/a/c.<init> ()V]
       [115] athrow
       [116] aload_0 v0
-      [117] getfield #70
-        + Fieldref [com/cfun/proxy/c/a.c Ljava/lang/String;]
+      [117] getfield #68
+        + Fieldref [com/cfun/proxy/c/a.d Ljava/lang/String;]
       [120] aload_0 v0
-      [121] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [124] getfield #78
+      [121] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [124] getfield #76
         + Fieldref [com/cfun/proxy/c/b.b Ljava/lang/String;]
-      [127] invokevirtual #118
+      [127] invokevirtual #115
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [130] ifeq +17 (target=147)
       [133] aload_0 v0
-      [134] getfield #71
-        + Fieldref [com/cfun/proxy/c/a.d I]
+      [134] getfield #69
+        + Fieldref [com/cfun/proxy/c/a.e I]
       [137] aload_0 v0
-      [138] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [141] getfield #81
+      [138] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [141] getfield #79
         + Fieldref [com/cfun/proxy/c/b.e I]
       [144] ificmpeq +119 (target=263)
       [147] aload_0 v0
-      [148] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [151] invokevirtual #91
+      [148] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [151] invokevirtual #89
         + Methodref [com/cfun/proxy/b/a.g ()V]
       [154] aload_0 v0
-      [155] getfield #77
+      [155] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [158] ifnull +17 (target=175)
       [161] aload_0 v0
-      [162] getfield #77
+      [162] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [165] invokevirtual #104
+      [165] invokevirtual #102
         + Methodref [com/cfun/proxy/c/c.a ()V]
       [168] aload_0 v0
-      [169] getfield #77
+      [169] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [172] invokevirtual #105
+      [172] invokevirtual #103
         + Methodref [com/cfun/proxy/c/c.interrupt ()V]
-      [175] new #41
+      [175] new #43
         + Class [java/net/Socket]
       [178] dup
       [179] aload_0 v0
-      [180] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [183] invokevirtual #101
-        + Methodref [com/cfun/proxy/c/b.b ()Ljava/lang/String;]
-      [186] invokestatic #140
+      [180] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [183] invokevirtual #99
+        + Methodref [com/cfun/proxy/c/b.a ()Ljava/lang/String;]
+      [186] invokestatic #134
         + Methodref [java/net/InetAddress.getByName (Ljava/lang/String;)Ljava/net/InetAddress;]
       [189] aload_0 v0
-      [190] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [193] invokevirtual #102
-        + Methodref [com/cfun/proxy/c/b.c ()I]
-      [196] invokespecial #142
+      [190] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [193] invokevirtual #100
+        + Methodref [com/cfun/proxy/c/b.b ()I]
+      [196] invokespecial #136
         + Methodref [java/net/Socket.<init> (Ljava/net/InetAddress;I)V]
       [199] astore_1 v1
       [200] aload_0 v0
-      [201] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
+      [201] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
       [204] aload_1 v1
-      [205] invokevirtual #89
+      [205] invokevirtual #87
         + Methodref [com/cfun/proxy/b/a.b (Ljava/net/Socket;)V]
       [208] aload_0 v0
-      [209] new #28
+      [209] new #30
         + Class [com/cfun/proxy/c/c]
       [212] dup
       [213] aload_0 v0
-      [214] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [217] invokespecial #103
+      [214] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [217] invokespecial #101
         + Methodref [com/cfun/proxy/c/c.<init> (Lcom/cfun/proxy/b/a;)V]
-      [220] putfield #77
+      [220] putfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
       [223] aload_0 v0
-      [224] getfield #77
+      [224] getfield #74
         + Fieldref [com/cfun/proxy/c/a.j Lcom/cfun/proxy/c/c;]
-      [227] invokevirtual #106
+      [227] invokevirtual #104
         + Methodref [com/cfun/proxy/c/c.start ()V]
       [230] aload_0 v0
       [231] aload_0 v0
-      [232] getfield #68
-        + Fieldref [com/cfun/proxy/c/a.a Lcom/cfun/proxy/b/a;]
-      [235] invokevirtual #90
+      [232] getfield #66
+        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/b/a;]
+      [235] invokevirtual #88
         + Methodref [com/cfun/proxy/b/a.d ()Ljava/io/BufferedOutputStream;]
-      [238] putfield #76
+      [238] putfield #73
         + Fieldref [com/cfun/proxy/c/a.i Ljava/io/BufferedOutputStream;]
       [241] aload_0 v0
       [242] aload_0 v0
-      [243] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [246] invokevirtual #101
-        + Methodref [com/cfun/proxy/c/b.b ()Ljava/lang/String;]
-      [249] putfield #70
-        + Fieldref [com/cfun/proxy/c/a.c Ljava/lang/String;]
+      [243] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [246] invokevirtual #99
+        + Methodref [com/cfun/proxy/c/b.a ()Ljava/lang/String;]
+      [249] putfield #68
+        + Fieldref [com/cfun/proxy/c/a.d Ljava/lang/String;]
       [252] aload_0 v0
       [253] aload_0 v0
-      [254] getfield #69
-        + Fieldref [com/cfun/proxy/c/a.b Lcom/cfun/proxy/c/b;]
-      [257] invokevirtual #102
-        + Methodref [com/cfun/proxy/c/b.c ()I]
-      [260] putfield #71
-        + Fieldref [com/cfun/proxy/c/a.d I]
+      [254] getfield #67
+        + Fieldref [com/cfun/proxy/c/a.c Lcom/cfun/proxy/c/b;]
+      [257] invokevirtual #100
+        + Methodref [com/cfun/proxy/c/b.b ()I]
+      [260] putfield #69
+        + Fieldref [com/cfun/proxy/c/a.e I]
       [263] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
@@ -59816,7 +59622,7 @@ Fields (count = 6):
     Access flags: 0x1
       = public boolean f
 
-Methods (count = 5):
+Methods (count = 4):
   - Method:       <init>(Ljava/lang/String;)V
     Access flags: 0x1
       = public b(java.lang.String)
@@ -59999,25 +59805,14 @@ Methods (count = 5):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #15
-        + Fieldref [com/cfun/proxy/c/b.a Ljava/lang/String;]
-      [4] areturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 0):
-  + Method:       b()Ljava/lang/String;
-    Access flags: 0x1
-      = public java.lang.String b()
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
-      [0] aload_0 v0
       [1] getfield #16
         + Fieldref [com/cfun/proxy/c/b.b Ljava/lang/String;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       c()I
+  + Method:       b()I
     Access flags: 0x1
-      = public int c()
+      = public int b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
@@ -60713,7 +60508,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 153):
+Constant Pool (count = 154):
   + Integer [2130968576]
   + String [++]
   + String [com.cfun.proxy_preferences]
@@ -60739,6 +60534,7 @@ Constant Pool (count = 153):
   + Methodref [android/preference/CheckBoxPreference.isChecked ()Z]
   + Methodref [android/preference/EditTextPreference.setEnabled (Z)V]
   + Methodref [android/preference/Preference.getKey ()Ljava/lang/String;]
+  + Methodref [android/preference/Preference.setEnabled (Z)V]
   + Methodref [android/preference/PreferenceFragment.<init> ()V]
   + Methodref [android/preference/PreferenceFragment.onCreate (Landroid/os/Bundle;)V]
   + Methodref [android/preference/PreferenceFragment.onPreferenceTreeClick (Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z]
@@ -60876,7 +60672,7 @@ Methods (count = 4):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #26
+      [1] invokespecial #27
         + Methodref [android/preference/PreferenceFragment.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -60888,12 +60684,12 @@ Methods (count = 4):
     + Code attribute instructions (code length = 12, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #27
+      [2] invokespecial #28
         + Methodref [android/preference/PreferenceFragment.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #1
         + Integer [2130968576]
-      [8] invokevirtual #32
+      [8] invokevirtual #33
         + Methodref [com/cfun/proxy/b.addPreferencesFromResource (I)V]
       [11] return
       Code attribute exceptions (count = 0):
@@ -60902,7 +60698,7 @@ Methods (count = 4):
     Access flags: 0x1
       = public boolean onPreferenceTreeClick(android.preference.PreferenceScreen,android.preference.Preference)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 80, locals = 5, stack = 4):
+    + Code attribute instructions (code length = 77, locals = 5, stack = 4):
       [0] aload_2 v2
       [1] invokevirtual #25
         + Methodref [android/preference/Preference.getKey ()Ljava/lang/String;]
@@ -60912,65 +60708,63 @@ Methods (count = 4):
         + Methodref [android/preference/Preference.getKey ()Ljava/lang/String;]
       [9] ldc #4
         + String [is]
-      [11] invokevirtual #36
+      [11] invokevirtual #37
         + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
-      [14] ifeq +59 (target=73)
+      [14] ifeq +56 (target=70)
       [17] new #16
         + Class [java/lang/StringBuilder]
       [20] dup
       [21] aload_3 v3
       [22] iconst_2
-      [23] invokevirtual #35
+      [23] invokevirtual #36
         + Methodref [java/lang/String.charAt (I)C]
-      [26] invokestatic #39
+      [26] invokestatic #40
         + Methodref [java/lang/String.valueOf (C)Ljava/lang/String;]
       [29] getstatic #21
         + Fieldref [java/util/Locale.CHINA Ljava/util/Locale;]
-      [32] invokevirtual #38
+      [32] invokevirtual #39
         + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
-      [35] invokestatic #40
+      [35] invokestatic #41
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [38] invokespecial #41
+      [38] invokespecial #42
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [41] aload_3 v3
       [42] iconst_3
-      [43] invokevirtual #37
+      [43] invokevirtual #38
         + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
-      [46] invokevirtual #42
+      [46] invokevirtual #43
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [49] invokevirtual #43
+      [49] invokevirtual #44
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [52] astore v4
       [54] aload_1 v1
       [55] aload v4
-      [57] invokevirtual #30
+      [57] invokevirtual #31
         + Methodref [android/preference/PreferenceScreen.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
-      [60] checkcast #9
-        + Class [android/preference/EditTextPreference]
-      [63] aload_2 v2
-      [64] checkcast #8
+      [60] aload_2 v2
+      [61] checkcast #8
         + Class [android/preference/CheckBoxPreference]
-      [67] invokevirtual #23
+      [64] invokevirtual #23
         + Methodref [android/preference/CheckBoxPreference.isChecked ()Z]
-      [70] invokevirtual #24
-        + Methodref [android/preference/EditTextPreference.setEnabled (Z)V]
-      [73] aload_0 v0
-      [74] aload_1 v1
-      [75] aload_2 v2
-      [76] invokespecial #28
+      [67] invokevirtual #26
+        + Methodref [android/preference/Preference.setEnabled (Z)V]
+      [70] aload_0 v0
+      [71] aload_1 v1
+      [72] aload_2 v2
+      [73] invokespecial #29
         + Methodref [android/preference/PreferenceFragment.onPreferenceTreeClick (Landroid/preference/PreferenceScreen;Landroid/preference/Preference;)Z]
-      [79] ireturn
+      [76] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
-        - [73] Var: ...[a:java/lang/String], Stack: (empty)
+        - [70] Var: ...[a:java/lang/String], Stack: (empty)
   + Method:       onResume()V
     Access flags: 0x1
       = public void onResume()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 167, locals = 8, stack = 4):
       [0] aload_0 v0
-      [1] invokevirtual #33
+      [1] invokevirtual #34
         + Methodref [com/cfun/proxy/b.getActivity ()Landroid/app/Activity;]
       [4] ldc #3
         + String [com.cfun.proxy_preferences]
@@ -60979,18 +60773,18 @@ Methods (count = 4):
         + Methodref [android/app/Activity.getSharedPreferences (Ljava/lang/String;I)Landroid/content/SharedPreferences;]
       [10] astore_1 v1
       [11] aload_1 v1
-      [12] invokeinterface #44
+      [12] invokeinterface #45
         + InterfaceMethodref [android/content/SharedPreferences.getAll ()Ljava/util/Map;]
-      [17] invokeinterface #48
+      [17] invokeinterface #49
         + InterfaceMethodref [java/util/Map.keySet ()Ljava/util/Set;]
       [22] astore_2 v2
       [23] aload_2 v2
-      [24] invokeinterface #49
+      [24] invokeinterface #50
         + InterfaceMethodref [java/util/Set.iterator ()Ljava/util/Iterator;]
       [29] astore v4
       [31] goto +121 (target=152)
       [34] aload v4
-      [36] invokeinterface #47
+      [36] invokeinterface #48
         + InterfaceMethodref [java/util/Iterator.next ()Ljava/lang/Object;]
       [41] checkcast #15
         + Class [java/lang/String]
@@ -60998,7 +60792,7 @@ Methods (count = 4):
       [45] aload_3 v3
       [46] ldc #4
         + String [is]
-      [48] invokevirtual #36
+      [48] invokevirtual #37
         + Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
       [51] ifeq +101 (target=152)
       [54] new #16
@@ -61006,25 +60800,25 @@ Methods (count = 4):
       [57] dup
       [58] aload_3 v3
       [59] iconst_2
-      [60] invokevirtual #35
+      [60] invokevirtual #36
         + Methodref [java/lang/String.charAt (I)C]
-      [63] invokestatic #39
+      [63] invokestatic #40
         + Methodref [java/lang/String.valueOf (C)Ljava/lang/String;]
       [66] getstatic #21
         + Fieldref [java/util/Locale.CHINA Ljava/util/Locale;]
-      [69] invokevirtual #38
+      [69] invokevirtual #39
         + Methodref [java/lang/String.toLowerCase (Ljava/util/Locale;)Ljava/lang/String;]
-      [72] invokestatic #40
+      [72] invokestatic #41
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [75] invokespecial #41
+      [75] invokespecial #42
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [78] aload_3 v3
       [79] iconst_3
-      [80] invokevirtual #37
+      [80] invokevirtual #38
         + Methodref [java/lang/String.substring (I)Ljava/lang/String;]
-      [83] invokevirtual #42
+      [83] invokevirtual #43
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [86] invokevirtual #43
+      [86] invokevirtual #44
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [89] astore v5
       [91] ldc #5
@@ -61033,33 +60827,33 @@ Methods (count = 4):
         + Class [java/lang/StringBuilder]
       [96] dup
       [97] aload_3 v3
-      [98] invokestatic #40
+      [98] invokestatic #41
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [101] invokespecial #41
+      [101] invokespecial #42
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [104] ldc #2
         + String [++]
-      [106] invokevirtual #42
+      [106] invokevirtual #43
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [109] aload v5
-      [111] invokevirtual #42
+      [111] invokevirtual #43
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [114] invokevirtual #43
+      [114] invokevirtual #44
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [117] invokestatic #31
+      [117] invokestatic #32
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [120] pop
       [121] aload_1 v1
       [122] aload_3 v3
       [123] iconst_0
-      [124] invokeinterface #45
+      [124] invokeinterface #46
         + InterfaceMethodref [android/content/SharedPreferences.getBoolean (Ljava/lang/String;Z)Z]
       [129] istore v6
       [131] aload_0 v0
-      [132] invokevirtual #34
+      [132] invokevirtual #35
         + Methodref [com/cfun/proxy/b.getPreferenceScreen ()Landroid/preference/PreferenceScreen;]
       [135] aload v5
-      [137] invokevirtual #30
+      [137] invokevirtual #31
         + Methodref [android/preference/PreferenceScreen.findPreference (Ljava/lang/CharSequence;)Landroid/preference/Preference;]
       [140] checkcast #9
         + Class [android/preference/EditTextPreference]
@@ -61069,11 +60863,11 @@ Methods (count = 4):
       [149] invokevirtual #24
         + Methodref [android/preference/EditTextPreference.setEnabled (Z)V]
       [152] aload v4
-      [154] invokeinterface #46
+      [154] invokeinterface #47
         + InterfaceMethodref [java/util/Iterator.hasNext ()Z]
       [159] ifne -125 (target=34)
       [162] aload_0 v0
-      [163] invokespecial #29
+      [163] invokespecial #30
         + Methodref [android/preference/PreferenceFragment.onResume ()V]
       [166] return
       Code attribute exceptions (count = 0):

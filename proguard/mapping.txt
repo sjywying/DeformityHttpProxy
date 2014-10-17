@@ -1420,28 +1420,23 @@ android.support.v4.widget.ViewDragHelper$Callback -> android.support.v4.widget.x
 com.cfun.proxy.Config -> com.cfun.proxy.a:
     boolean isProxyServer -> a
     boolean isBeforeURL -> b
-    boolean isReplaceURL -> c
-    boolean isSuffix -> d
-    boolean isReplaceProtectVersion -> e
-    boolean isInsertHost -> f
-    boolean isReplaceHost -> g
-    boolean isReplaceAccept -> h
-    boolean isInsertX -> i
-    boolean isXOnlineHost -> j
-    boolean isCustom -> k
-    boolean isReplaceConnection -> l
-    java.lang.String proxyServer -> m
-    java.lang.String beforeURL -> n
-    java.lang.String replaceURL -> o
-    java.lang.String suffix -> p
-    java.lang.String replaceProtectVersion -> q
-    java.lang.String insertHost -> r
-    java.lang.String replaceHost -> s
-    java.lang.String replaceAccept -> t
-    java.lang.String insertX -> u
-    java.lang.String xOnlineHost -> v
-    java.lang.String custom -> w
-    java.lang.String replaceConnection -> x
+    boolean isInsertHost -> c
+    boolean isReplaceHost -> d
+    boolean isReplaceAccept -> e
+    boolean isInsertX -> f
+    boolean isXOnlineHost -> g
+    boolean isCustom -> h
+    boolean isReplaceConnection -> i
+    java.lang.String proxyServer -> j
+    java.lang.String beforeURL -> k
+    java.lang.String firstLinePattern -> l
+    java.lang.String insertHost -> m
+    java.lang.String replaceHost -> n
+    java.lang.String replaceAccept -> o
+    java.lang.String insertX -> p
+    java.lang.String xOnlineHost -> q
+    java.lang.String custom -> r
+    java.lang.String replaceConnection -> s
     void refresh(android.content.Context) -> a
 com.cfun.proxy.Exception.ClientReadFirstLineExpection -> com.cfun.proxy.a.a:
 com.cfun.proxy.Exception.FirstLineFormatErrorExpection -> com.cfun.proxy.a.b:
@@ -1487,19 +1482,20 @@ com.cfun.proxy.ProxyService -> com.cfun.proxy.ProxyService:
 com.cfun.proxy.Setting -> com.cfun.proxy.Setting:
     void onCreate(android.os.Bundle) -> onCreate
 com.cfun.proxy.SocketIO.Client2Proxy -> com.cfun.proxy.c.a:
-    com.cfun.proxy.HttpProxy.HttpConnection conn -> a
-    com.cfun.proxy.SocketIO.HttpFirstLine hfl -> b
-    java.lang.String OldHost -> c
-    int OldPort -> d
-    int content_length -> e
-    byte[] buffer -> f
-    java.lang.StringBuilder lineBuilder -> g
+    com.cfun.proxy.HttpProxy.HttpConnection conn -> b
+    com.cfun.proxy.SocketIO.HttpFirstLine hfl -> c
+    java.lang.String OldHost -> d
+    int OldPort -> e
+    int content_length -> f
+    byte[] buffer -> g
     java.io.BufferedInputStream iStream -> h
     java.io.BufferedOutputStream oStream -> i
+    byte[] CLCR -> a
     com.cfun.proxy.SocketIO.HttpServer2Proxy S2C -> j
     void doRequest() -> a
     boolean analyseFirstLine() -> b
     void writeFirstLine() -> c
+    java.lang.String patternMatching(java.lang.String,com.cfun.proxy.SocketIO.HttpFirstLine,boolean) -> a
     void analyseAndWriteHead() -> d
     void writeBody() -> e
     java.lang.String getLine(java.io.BufferedInputStream) -> a
@@ -1511,9 +1507,8 @@ com.cfun.proxy.SocketIO.HttpFirstLine -> com.cfun.proxy.c.b:
     java.lang.String Version -> d
     int Port -> e
     boolean isSSL -> f
-    java.lang.String getMethod() -> a
-    java.lang.String getHost() -> b
-    int getPort() -> c
+    java.lang.String getHost() -> a
+    int getPort() -> b
     void parstHost(java.lang.String,int) -> a
 com.cfun.proxy.SocketIO.HttpServer2Proxy -> com.cfun.proxy.c.c:
     byte[] buffer -> a

@@ -3,6 +3,7 @@
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URLEncoder;
@@ -26,12 +27,12 @@ public class Client2Proxy
 
 	private int content_length= 0;
 	private byte[] buffer= new byte[10240];
-	private StringBuilder lineBuilder=new StringBuilder();
 
 	private BufferedInputStream iStream= null;
 	private BufferedOutputStream oStream= null;
 	
 //	private int ReadTimes = 1;
+	byte[] CLCR= {'\r', '\n'};
 
 	private HttpServer2Proxy S2C=null;
 	public Client2Proxy(HttpConnection conn) throws IOException
@@ -103,41 +104,25 @@ public class Client2Proxy
 	protected void writeFirstLine() throws IOException
 	{
 		//是否在Http请求前插入数据
-		lineBuilder.delete(0, lineBuilder.length());
 		if(Config.isBeforeURL)
 			oStream.write(("GET http://"+Config.beforeURL+" HTTP/1.1\r\nConnection: Keep-Alive\r\n\r\n").getBytes("iso8859-1"));
-		lineBuilder.append(hfl.getMethod());
-		lineBuilder.append(' ');
-		if(Config.isProxyServer) //在使用代理服务器时才插入Http和请求头
-		{
-			lineBuilder.append("http://");
-			//替换请求行的URL操作
-			lineBuilder.append(Config.isReplaceURL?Config.replaceURL:hfl.getHost());
-		}
-		lineBuilder.append(hfl.Uri);
-		//是否加后缀
-		if(Config.isSuffix)
-		{
-			if(hfl.Uri.charAt(hfl.Uri.length()-1)!='?')
-				lineBuilder.append(hfl.Uri.indexOf('?')>0?'&':'?');
-			lineBuilder.append(Config.suffix);
-			lineBuilder.append("=a");
-		}
-		lineBuilder.append(' ');
-		//是否更改HTTP协议版本
-		lineBuilder.append(Config.isReplaceProtectVersion?Config.replaceProtectVersion : hfl.Version);
-		lineBuilder.append("\r\n");
-			
-		oStream.write(lineBuilder.toString().getBytes("iso8859-1"));
+		
+		@SuppressWarnings("unused")
+		String t = patternMatching(Config.firstLinePattern, hfl, true);
+		oStream.write(patternMatching(Config.firstLinePattern, hfl, true).getBytes("iso8859-1"));
+		oStream.write(CLCR);
 //		System.out.print(lineBuilder.toString());
 		
 	}
 
-	protected void analyseAndWriteHead() throws IOException
+	protected String patternMatching(String str,HttpFirstLine hf,boolean smart) throws UnsupportedEncodingException
 	{
-		if(Config.isCustom) 
-		{//要插入自定义信息
-		String insert = Config.custom.replace("%HOST%", hfl.Host).replace("%PORT%", String.valueOf(hfl.Port)).replace("%URI%", hfl.Uri);
+		String insert = str.replace("[METHOD]", hfl.Method).replace("[HOST]", hfl.Host).replace("[PORT]", String.valueOf(hfl.Port)).replace("[URI]", hfl.Uri).replace("[HTTP_VER]", hfl.Version);
+		if(smart)
+		{
+			String c = hf.Uri.indexOf('?')>0?"&":"?";
+			insert = insert.replace("[SMART]", c);
+		}
 		int index = insert.indexOf("URLEncode(");
 		int index2 = insert.indexOf(')');
 		if(index>-1 && index2>=index+10)
@@ -147,10 +132,18 @@ public class Client2Proxy
 			String s3 = insert.substring(index2+1);
 			insert = s1+URLEncoder.encode(s2,"iso8859-1")+s3;
 		}
-		oStream.write(( insert+ "\r\n").getBytes("iso8859-1"));
-		}
+		return insert;
+	}
+	protected void analyseAndWriteHead() throws IOException
+	{
 		content_length= 0;
-		byte[] CLCR= {'\r', '\n'};
+		
+		if(Config.isCustom) 
+		{//要插入自定义信息
+		oStream.write(patternMatching(Config.custom, hfl, false).getBytes("iso8859-1"));
+		oStream.write(CLCR);
+		}
+		
 		for(String line= getLine(iStream); line.length() > 2; line= getLine(iStream))
 		{
 			String littleLine = null;

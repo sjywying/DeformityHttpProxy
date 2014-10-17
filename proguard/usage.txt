@@ -1386,7 +1386,8 @@ com.cfun.proxy.R$string
 com.cfun.proxy.R$style
 com.cfun.proxy.R$xml
 com.cfun.proxy.SocketIO.Client2Proxy:
-    221:234:protected boolean isSupport(java.lang.String)
+    214:227:protected boolean isSupport(java.lang.String)
 com.cfun.proxy.SocketIO.HttpFirstLine:
     56:56:public java.lang.String getVersion()
+    61:61:public java.lang.String getMethod()
     66:66:public java.lang.String getUri()

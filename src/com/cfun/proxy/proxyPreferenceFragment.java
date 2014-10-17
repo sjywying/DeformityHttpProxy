@@ -27,8 +27,9 @@ public class proxyPreferenceFragment extends PreferenceFragment {
 		if(preference.getKey().startsWith("is"))
 		{
 			String littleKey = String.valueOf(key.charAt(2)).toLowerCase(Locale.CHINA)+key.substring(3);
-			((EditTextPreference)(preferenceScreen.findPreference(littleKey))).setEnabled(((CheckBoxPreference)preference).isChecked());
+			preferenceScreen.findPreference(littleKey).setEnabled(((CheckBoxPreference)preference).isChecked());
 		}
+		
 		return super.onPreferenceTreeClick(preferenceScreen, preference);
 	}
 

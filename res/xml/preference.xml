@@ -26,37 +26,11 @@
             android:title="前插URL" />
     </PreferenceCategory>
     <PreferenceCategory android:title="HTTP请求行设定" >
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="isReplaceURL"
-            android:title="是否更换URL" >
-        </CheckBoxPreference>
-
         <EditTextPreference
-            android:defaultValue="wap.10010.com"
-            android:key="replaceURL"
-            android:title="更换的URL" />
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="isSuffix"
-            android:title="是否添加后缀URL" />
-
-        <EditTextPreference
-            android:defaultValue="wap.10010.com"
-            android:key="suffix"
-            android:title="后缀URL" />
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="isReplaceProtectVersion"
-            android:title="是否更换HTTP协议版本" >
-        </CheckBoxPreference>
-
-        <EditTextPreference
-            android:defaultValue="HTTP1.1"
-            android:key="replaceProtectVersion"
-            android:title="HTTP协协议版本" />
+            android:defaultValue="[METHOD] [HOST]:[PORT][URI] [HTTP_VER]"
+            android:key="firstLinePattern"
+            android:summary="[METHOD] [HOST]:[PORT][URI] [HTTP_VER] [SMART] URLEncode()" 
+            android:title="模式匹配第一行数据"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="HOST设定" >
         <CheckBoxPreference
@@ -128,7 +102,7 @@
 
         <EditTextPreference
             android:key="custom"
-            android:summary="%HOST%-主机 %PORT%-端口 %URI%-URI URLEcode()"
+            android:summary="请求行模式匹配字符串[METHOD] [HOST]:[PORT][URI] [HTTP_VER] URLEncode()" 
             android:title="要插入的自定义字段" />
     </PreferenceCategory>
 
